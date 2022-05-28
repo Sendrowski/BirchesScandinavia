@@ -1,0 +1,75 @@
+---- Running command
+---- ./polyDFE -d output/tetraploid/polydfe/pendula_pubescens/spectra/sfs.txt -m A -i resources/polydfe/init_model_A.txt 1 -v 100 
+---- Performing inference using model A
+
+---- Performing inference on output/tetraploid/polydfe/pendula_pubescens/spectra/sfs.txt
+----      with -i resources/polydfe/init_model_A.txt 1
+---- Data output/tetraploid/polydfe/pendula_pubescens/spectra/sfs.txt does not contain divergence counts. Using option -w.
+---- No mutation variability. Using Poisson likelihood.
+
+
+---- Using provided initial values
+
+-- Starting local optimization
+-- Optimizing all parameters
+  it     theta_bar         S_bar             b         S_max           r 2           r 3           r 4           r 5           r 6           r 7           r 8           r 9          r 10          r 11          r 12          r 13          r 14          r 15          r 16          r 17          r 18          r 19           ln lk          grad status 
+   0          0.01           -40           0.5            10             1             1             1             1             1             1             1             1             1             1             1             1             1             1             1             1             1             1 -7674.767007048 126.435759449   -2 
+  31 0.02162009975 -569.47433240 0.38576548263 4.69458918539 0.74665095896 0.59166919621 0.50425260178 0.45369069222 0.38483357402 0.34114127092 0.32056572512 0.31213343603 0.30807292599 0.30894105451 0.31492307935 0.32951941616 0.34942154250 0.37141597229 0.37940930055 0.35162629974 0.27567392873 0.16172959321 -203.0819800998 1.14932870464   -3 
+-- Local optimization: stuck in the same solution
+-- Found new optimum with likelihood -203.081980099886238 and gradient 1.14933
+
+---- Best joint likelihood found -203.081980099886238 with gradient 1.14933
+
+---- Results for output/tetraploid/polydfe/pendula_pubescens/spectra/sfs.txt 
+--  Model: A
+--        eps_an     theta_bar             a 
+--             0 0.02162009975            -1 
+--         S_bar             b         S_max 
+-- -569.47433240 0.38576548263 4.69458918539 
+--           r 2           r 3           r 4           r 5           r 6           r 7           r 8           r 9          r 10          r 11          r 12          r 13          r 14          r 15          r 16          r 17          r 18          r 19 
+-- 0.74665095896 0.59166919621 0.50425260178 0.45369069222 0.38483357402 0.34114127092 0.32056572512 0.31213343603 0.30807292599 0.30894105451 0.31492307935 0.32951941616 0.34942154250 0.37141597229 0.37940930055 0.35162629974 0.27567392873 0.16172959321 
+
+---- Expected P_neut(i), 0 < i < n (neutral SFS per site) 
+E[P_neut(1)] = 0.0216200998
+E[P_neut(2)] = 0.0080713341
+E[P_neut(3)] = 0.0042639823
+E[P_neut(4)] = 0.0027254979
+E[P_neut(5)] = 0.0019617676
+E[P_neut(6)] = 0.0013866900
+E[P_neut(7)] = 0.0010536440
+E[P_neut(8)] = 0.0008663329
+E[P_neut(9)] = 0.0007498173
+E[P_neut(10)] = 0.0006660567
+E[P_neut(11)] = 0.0006072124
+E[P_neut(12)] = 0.0005673890
+E[P_neut(13)] = 0.0005480187
+E[P_neut(14)] = 0.0005396092
+E[P_neut(15)] = 0.0005353367
+E[P_neut(16)] = 0.0005126792
+E[P_neut(17)] = 0.0004471880
+E[P_neut(18)] = 0.0003311165
+E[P_neut(19)] = 0.0001840321
+
+---- Expected P_sel(i), 0 < i < n (selected SFS per site) 
+E[P_sel(1)] = 0.0062958203
+E[P_sel(2)] = 0.0017566935
+E[P_sel(3)] = 0.0008462201
+E[P_sel(4)] = 0.0005244068
+E[P_sel(5)] = 0.0003763064
+E[P_sel(6)] = 0.0002694325
+E[P_sel(7)] = 0.0002095509
+E[P_sel(8)] = 0.0001777172
+E[P_sel(9)] = 0.0001596154
+E[P_sel(10)] = 0.0001478795
+E[P_sel(11)] = 0.0001412372
+E[P_sel(12)] = 0.0001388223
+E[P_sel(13)] = 0.0001415741
+E[P_sel(14)] = 0.0001477192
+E[P_sel(15)] = 0.0001558316
+E[P_sel(16)] = 0.0001592228
+E[P_sel(17)] = 0.0001486651
+E[P_sel(18)] = 0.0001182120
+E[P_sel(19)] = 0.0000707807
+
+---- alpha_dfe = 0.968505
+
