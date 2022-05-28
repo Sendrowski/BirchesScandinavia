@@ -9,3 +9,5 @@ testing
 bootstraps
 batches
 __pycache__/
+/resources/reference/
+/resources/betula_pendula_info/
