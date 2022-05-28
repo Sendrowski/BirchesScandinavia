@@ -1,0 +1,6 @@
+name: trimmomatic
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - trimmomatic=0.36

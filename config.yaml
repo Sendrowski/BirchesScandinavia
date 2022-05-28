@@ -1,0 +1,58 @@
+birch_samples: 'resources/birch_samples.csv'
+sample_sets: 'output/{sample_class}/sample_sets/{sample_set}.args'
+pendula_samples_luis: 'resources/pendula_samples_luis.txt'
+outgroup_samples: 'resources/outgroup_samples.csv'
+reference_genome: 'resources/reference/genome.fasta'
+annotation_file: 'resources/reference/genome.gff'
+targeted_genes: 'resources/reference/targeted_positions.txt'
+plink_data: 'output/{sample_class}/snps/{sample_set}/{flag}/snps'
+# separate the population at this latitude
+latitudinal_barriers:
+  pendula: 64
+  pubescens: 65
+# the number of genomic intervals that are run in parallel
+# when calling the variants and annotating the sites
+n_genomic_intervals: 100
+# batch size when using GATK' GenomicsDBImport
+# this reduces memory consumption
+genomics_import_batch_size: 10
+# additional number of parallel processes when calling the haplotypes
+n_files_haplotype_calling: 5
+est_sfs_config: "resources/est-sfs/config.txt"
+# EST-SFS binaries
+est_sfs_bin: "resources/est-sfs/bin"
+# maximum number of sites used for EST-SFS
+# this number is hard-coded and has to be replaced at compilation time
+# the compilation seems to fail for values larger than around 1000000
+est_sfs_max_sites: 500000
+# maximum number of samples
+# EST-SFS doesn't allow more than 200 alleles (including the outgroups)
+# a size of 50 produced an SFS sufficiently smooth
+est_sfs_n_samples: 50
+polydfe_postprocessing_source: 'resources/polydfe/postprocessing/script.R'
+polydfe_postprocessing_source_url: 'https://github.com/paula-tataru/polyDFE/raw/master/postprocessing.R'
+# number of boostrap samples for polyDFE
+polydfe_n_bootstraps: 100
+# mutations per site per generation
+# broad leaf tree in general: 7.77e-9
+# 1e-9 was also used for B. pendula in Jarkko et al.
+mu: 1.0e-9
+# generation time in years
+generation_time: 20
+# π_s = 4μN_e => N_e = π_s/(4μ)
+N_e:
+  pendula: 945883
+  pubescens: 2433981
+  pendula_pubescens: 2235669
+# basin hopping is deprecated
+dadi_n_iter_basin_hopping: 1000
+# number of iteration per batch used for global optimization
+dadi_n_iter_random_hopping: 5
+dadi_n_batches_global_optimization: 200
+# more iterations did not produce any more likely results,
+# the first iteration yielding the best likelihood in all
+# observed cases when initializing the bootstraps with
+# initial values obtained from the global optimization procedure
+dadi_n_iter_local_optimization: 5
+dadi_n_bootstraps_gim: 500
+dadi_n_bootstraps: 100

@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{titling}
+\usepackage[hidelinks]{hyperref}
+\usepackage{textgreek}
+
+\bibliographystyle{plain}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}}%
+}
+
+\begin{document}
+
+\title{Project plan}
+\subtitle{Population structure and patterns of adaptation in birch}
+\author{}
+\date{\today}
+ 
+\maketitle
+ 
+\tableofcontents
+ 
+\section{Participants}
+ 
+Project supervisor: Martin Lascoux\\
+Project co-supervisor: Jennifer James\\
+Subject reader: Mattias Jakobsson\\
+Examiner: Pascal Milesi\\
+Student: Janek Sendrowski
+ 
+\section{Background}
+
+Observed patterns of genetic variability and structure in present day populations are shaped by a complex interplay of many factors, including individual dispersal ability, environmental conditions, and past demographic events. Climatic events such as glaciations are particularly noteworthy: they had a broad impact on many species, leading to reductions in population size and range contractions \cite{recolonization-birch}. Many species then gradually recolonized areas as global temperatures increased \cite{birch-climate-change-treeline}. The route that individuals took in recolonizing, the distance from the refuge area, and the uneven inheritance of ancestral variation can all lead to patterns in population-level genetic data \cite{recolonization-birch}. 
+
+However, some of the genetic differences we observe between populations could also be the result of adaptation. For example, after a glaciation, as temperatures increase and species can recolonize previously inhospitable areas, they may encounter different climatic zones. This may result in species adapting to local environmental conditions \cite{jarkko}. Maintaining such adaptation can also lead to persistent population structure. 
+
+Gaining a better understanding of the complex factors that determine patterns of polymorphism within species is the broad aim of this project. This research will focus on tree species in Europe, particularly birch. Trees are a keystone species with limited dispersal ability; as sessile organisms, they are not able to migrate in the face of unfavorable climatic conditions, and thus might experience strong selective pressure to adapt to local environmental conditions. Birch trees have been the focus of a recent sequencing effort, with individual trees sampled in Sweden over a latitudinal gradient that includes a transition between different climatic zones. Whole genomes have also been sequenced from individuals sampled over the broad range of birch trees in Europe.
+
+\section{Project Importance}
+
+The project is of general importance to the understanding of the population structure and demographic history of birch and will contribute understanding (in the form of written reports), and an analysis pipeline that will be made publicly available on GitHub, both of which will be useful to researchers, particularly to collaborators and others in the field. 
+
+In the longer term, the project is important from a social perspective: studying past patterns of migration and adaptation of large, slowly growing, slowly dispersing species could help our understanding of what is likely to happen to such species as climate conditions change in future.
+
+\section{Objectives}
+
+The goals of the project can be broken down into the following steps:
+
+\textbf{Objective 1}: Examine geographic differentiation, migration and isolation by distance.
+\begin{itemize}
+\item Determine whether there exist geographic differences.
+\item Estimate migration.
+\item Compare results with established results from literature.
+\item Potentially use genome-wide genealogy methods for estimating isolation by distance.
+\end{itemize}
+
+\textbf{Objective 2}: Estimate the distribution of fitness effects (DFE).
+\begin{itemize}
+\item Estimate the DFE for all \textit{B. pendula} samples as a whole.
+\item Compare the DFE between populations in different climate zones.
+\item Include the estimation of the distribution of beneficial mutations.
+\end{itemize}
+
+\textbf{Objective 3}: Fit a model of the demographic history of the populations to the data.
+\begin{itemize}
+\item Review literature to identify preliminary demographic models to test. 
+\item Consider the use of new methods - including genome-wide genealogy methods for estimating population dispersal rates.
+\item Check for accordance between inferred demography and results. 
+\end{itemize}
+
+\section{Practical}
+
+\subsection{Procedure}
+
+The brunt of the work will be  concerned with building the pipeline to perform the various analyses. Technical problems are thus likely to arise which can slow down the progress significantly. An efficient, highly parallelized and fully automatic pipeline is to be implemented using \textit{snakemake} for workflow management. The use of this software ensures reproducibility as well as extensibility. The sample size can, for example, easily be increased later on to make the analyses more robust or diverse. Despite using UPPMAX for all computations, the pipeline will be platform-independent, solely relying on Conda for its dependencies.
+
+The initial raw data consist of resequenced Illumina short reads primarily from \textit{Betula pendula} and \textit{B. pubescens} samples across Sweden and Norway. We will mostly focus on \textit{B. pendula} in this work whose reference genome we use. The data need to be trimmed, checked for quality and mapped before the SNPs can be called. These analyses will be performed with Trimmomatic, FastQC, BWA and GATK, respectively. The reference genome as well as the alder outgroup species were obtained from a repository associated with a Finnish genome sequencing project \cite{jarkko}. Different filtering criteria are to be tested for the called variants to see which ones are most appropriate.
+
+Initially, a PCA plot and a PCA-like tool called UMAP \cite{umap} will be used to provide information on how to subdivide the data in further analyses. A more sophisticated approach for clustering might also be appropriate. We calculate some more basic summary statistics like $F_{ST}$ and $\pi$ before proceeding with the estimation of migration surfaces with FEEMS \cite{feems}. We then compare the distribution of fitness effects (DFE) among different populations using polyDFE. For this we first need to distinguish synonymous from non-synonymous sites. If we additionally like to infer the distribution of beneficial mutations, we need to obtain an unfolded site frequency spectrum (SFS). We can do this by identifying the ancestral variant of our SNPs using an outgroup. After that, \textdelta a\textdelta i \cite{dadi}, which is also based on the SFS, will be used to test for the likelihood of different demographic models. DILS could subsequently be used to infer demographic scenarios as well, if time permits \cite{dils}. The formatting of input data seems to be rather demanding for this tool, however. The use of genome-wide genealogy methods might not be practical as the raw data is unphased. One idea is trying to phase it in retrospect, using statistical methods, but this may not provide results reliable enough.
+
+\subsection{Expectations}
+
+We generally do not expect a high level of population differentiation between different populations which is partly due to the large dispersal distances of the pollen. We do, however, expect differentiation along a latitudinal cline. The sample set we will work with also includes data from \textit{B. pubescens} and other species which may have to be excluded for some analyses. We furthermore don't expect the DFE to differ between populations in different climate zones--despite their genetic differentiation. We hope to corroborate some results obtained from previous papers on birches \cite{multispecies-structure-birch,recolonization-birch}.
+
+\subsection{Meetings}
+
+Meetings will be held weekly. The student will also work on site so that possible issues can be addressed immediately.
+
+\subsection{Problems}
+
+If problems arise, the student will have to adjust the scope of the thesis, potentially reducing the number of analyses.
+
+\subsection{Schedule}\label{sec:schedule}
+\vspace{0.75em}
+\bgroup
+\def\arraystretch{1.25}%
+\begin{center}
+\begin{tabular}{ | p{10em} | p{20em} | } 
+September 1 & Broad literature review \\ 
+September 15 & Familiarization with data set\\
+September 22 & Trimming, mapping and variant calling\\ 
+October 1 & PCA, UMAP and FEEMS \cite{umap,feems} \\
+October 12 & polyDFE \cite{polydfe} \\ 
+October 24 & \textdelta a\textdelta i \cite{dadi} \\ 
+Early November & (DILS, Relate \cite{dils,relate}) \\ 
+Mid November & Begin preparation of midterm presentation \\ 
+Late November & Midterm presentation\\ 
+Early December & Begin writing report\\ 
+One week before final presentation & Submission of written report \\
+Late January / early February & Final presentation\\
+\end{tabular}
+\end{center}
+\egroup
+
+\bibliography{refs}
+
+\end{document}

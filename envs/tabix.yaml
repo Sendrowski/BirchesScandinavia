@@ -1,0 +1,6 @@
+name: tabix
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - tabix=1.11

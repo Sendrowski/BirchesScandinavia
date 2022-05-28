@@ -1,0 +1,17 @@
+name: feems
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8.3
+  - suitesparse=5.7.2
+  - scikit-sparse=0.4.4
+  - cartopy=0.18.0
+  - sphinx=3.1.2
+  - sphinx_rtd_theme=0.5.0
+  - nbsphinx=0.7.1
+  - sphinx-autodoc-typehints
+  - pandas-plink=2.2.9
+  - scikit-learn=0.24.2
+  - pip
+  - pip:
+    - git+https://github.com/NovembreLab/feems

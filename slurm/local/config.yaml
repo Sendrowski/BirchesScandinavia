@@ -1,0 +1,6 @@
+jobs: 1
+nolock: true
+default-resources: [cpus=1, time=60, mem_mb=6400, disk_mb=100000]
+printshellcmds: true
+latency-wait: 5
+use-conda: true

@@ -1,0 +1,6 @@
+name: agat
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - agat=0.8.0

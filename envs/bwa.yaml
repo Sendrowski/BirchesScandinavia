@@ -1,0 +1,6 @@
+name: bwa
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - bwa=0.7.17

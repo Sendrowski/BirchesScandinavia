@@ -1,0 +1,13 @@
+.snakemake
+.DS_Store
+.idea
+.idea/**
+.RData
+.Rhistory
+resources
+scratch
+testing
+__pycache__/
+# Project exclude paths
+/results/tetraploid/dadi/
+/results/tetraploid/polydfe/

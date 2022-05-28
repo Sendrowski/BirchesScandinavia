@@ -1,0 +1,6 @@
+dadi_n_iter_basin_hopping: 100
+dadi_n_iter_random_hopping: 15
+dadi_n_batches_global_optimization: 12
+dadi_n_iter_local_optimization: 20
+dadi_n_bootstraps_gim: 500
+dadi_n_bootstraps: 12

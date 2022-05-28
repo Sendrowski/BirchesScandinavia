@@ -1,0 +1,8 @@
+name: read_mapping
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - bwa=0.7.17
+  - samtools=1.12

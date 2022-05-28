@@ -1,0 +1,5 @@
+name: admixture
+channels:
+  - bioconda
+dependencies:
+  - admixture=1.3

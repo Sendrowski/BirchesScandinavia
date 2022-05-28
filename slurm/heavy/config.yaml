@@ -1,0 +1,8 @@
+jobs: 10
+cluster: "sbatch -o 'slurm/logs/%j.out' -e 'slurm/logs/%j.out' -A snic2021-22-730 \
+    -M rackham -p core -n {resources.cpus} -t {resources.time} -J run_snakemake"
+default-resources: [cpus=4, time=1200, mem_mb=4*6400, disk_mb=100000]
+nolock: true
+printshellcmds: true
+latency-wait: 5
+use-conda: true

@@ -1,0 +1,12 @@
+name: convert_dadi
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - pyvcf=0.6.8
+  - biopython=1.79
+  - numpy
+  - pandas
+  - pyyaml=5.4.1
+  - pandas-plink=2.2.9
+  - scikit-learn=0.24

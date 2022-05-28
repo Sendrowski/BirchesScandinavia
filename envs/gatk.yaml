@@ -1,0 +1,7 @@
+name: gatk
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - gatk4=4.2.2.0
+  - snakemake-wrapper-utils=0.2.0

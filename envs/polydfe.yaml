@@ -1,0 +1,6 @@
+name: polydfe
+channels:
+  - genomedk
+dependencies:
+  - python>=3.9
+  - polydfe=2.0

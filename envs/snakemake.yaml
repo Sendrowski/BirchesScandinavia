@@ -1,0 +1,8 @@
+name: snakemake
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - snakemake=6.12
+  - pandas
+  - pyyaml

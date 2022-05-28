@@ -1,0 +1,6 @@
+name: plink2
+channels:
+  - bioconda
+dependencies:
+  - python>=3.9
+  - plink2
