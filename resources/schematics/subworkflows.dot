@@ -1,0 +1,26 @@
+digraph pipeline_schematic {
+    graph[bgcolor=white, ratio=0.6];
+    node[shape=box, style=rounded, fontname=sans, fontsize=30, penwidth=3, shape=box, nodesep=1 margin=0.3];
+    edge[color=grey, splines=curved, weight=1, penwidth=3, arrowsize=2];
+	0[label="Basic definitions", color="#9915d1"];
+	1[label="SNP calling & VCF annotation", color="#9915d1"];
+	2[label="Sample set derivation", color="#9915d1"];
+	3[label="VCF filtering", color="#9915d1"];
+	4[label="Summary statistics", color="#15b5d1"];
+	5[label="FEEMS", color="#15b5d1"];
+	6[label="PCA", color="#15b5d1"];
+	7[label="UMAP", color="#15b5d1"];
+	8[label="polyDFE", color="#15b5d1"];
+	9[label="dadi", color="#15b5d1"];
+	10[label="ADMIXTURE", color="#15b5d1"];
+	0 -> 1
+	1 -> 2
+	2 -> 3
+	3 -> 4
+	3 -> 5
+	3 -> 6
+	3 -> 7
+	3 -> 8
+	3 -> 9
+	3 -> 10
+}

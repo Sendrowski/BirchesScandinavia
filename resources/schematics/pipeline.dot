@@ -1,0 +1,38 @@
+digraph pipeline_schematic {
+    graph[bgcolor=white, ratio=0.6];
+    node[shape=box, style=rounded, fontname=sans, fontsize=30, penwidth=3, shape=box, nodesep=1 margin=0.3];
+    edge[color=grey, splines=curved, weight=1, penwidth=3, arrowsize=2];
+	0[label="birch reads", color="#d11515"];
+	16[label="outgroup reads", color="#d11515"];
+	1[label="reference genome", color="#d11515"];
+	2[label="raw VCF file", color="#9915d1"];
+	3[label="SFS", color="#9915d1"];
+	4[label="PCA", color="#15b5d1"];
+	5[label="UMAP", color="#15b5d1"];
+	6[label="FEEMS", color="#15b5d1"];
+	7[label="dadi", color="#15b5d1"];
+	8[label="polyDFE", color="#15b5d1"];
+	9[label="basic statistics", color="#15b5d1"];
+	10[label="mapped reads", color="#9915d1"];
+	11[label="annotated VCF file", color="#9915d1"];
+	17[label="PLINK format", color="#9915d1"];
+	12[label="ADMIXTURE", color="#15b5d1"];
+	14[label="GFF file", color="#d11515"];
+	15[label="targeted genes", color="#d11515"];
+	0 -> 10
+	16 -> 10
+	1 -> 10
+	10 -> 2
+	17 -> 4
+	17 -> 5
+	17 -> 6
+	11 -> 3
+	3 -> 7
+	3 -> 8
+	2 -> 11
+	11 -> 9
+	11 -> 17
+	17 -> 12
+	14 -> 11
+	15 -> 2
+}

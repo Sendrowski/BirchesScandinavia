@@ -1,0 +1,3 @@
+,name,species,url_left_read,url_right_read,path_left_read,path_right_read
+0,ERR2103730,Alnus_incana,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR210/000/ERR2103730/ERR2103730_1.fastq.gz,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR210/000/ERR2103730/ERR2103730_2.fastq.gz,outgroup/ERR2103730.1.fastq.gz,outgroup/ERR2103730.2.fastq.gz
+1,ERR2103731,Alnus_glutinosa,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR210/001/ERR2103731/ERR2103731_1.fastq.gz,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR210/001/ERR2103731/ERR2103731_2.fastq.gz,outgroup/ERR2103731.1.fastq.gz,outgroup/ERR2103731.2.fastq.gz

@@ -4,10 +4,7 @@
 .idea/**
 .RData
 .Rhistory
-resources
 scratch
 testing
+bootstraps
 __pycache__/
-# Project exclude paths
-/results/tetraploid/dadi/
-/results/tetraploid/polydfe/
