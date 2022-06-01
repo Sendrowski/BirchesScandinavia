@@ -1,3 +1,11 @@
+"""
+Annotate sites with regards to their degeneracy.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import vcf
 from Bio import SeqIO
 from vcf.parser import _Info as Info

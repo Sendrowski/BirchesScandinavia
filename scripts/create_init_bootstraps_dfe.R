@@ -1,3 +1,6 @@
+###
+# Create init files for bootstraps using polyDFE.
+###
 
 if (exists('snakemake')) {
     input = snakemake@input[[1]]

@@ -1,3 +1,11 @@
+"""
+Setup est-sfs by downloading it from Sourceforge and compiling it.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 from snakemake.shell import shell
 
 try:

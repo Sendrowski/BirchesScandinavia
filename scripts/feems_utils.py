@@ -1,3 +1,11 @@
+"""
+Utilities for FEEMS.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 import pkg_resources

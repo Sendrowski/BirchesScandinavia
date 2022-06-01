@@ -1,3 +1,11 @@
+"""
+Gather results of different demographic scenarios in a table.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import math
 
 import numpy as np

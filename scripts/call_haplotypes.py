@@ -1,3 +1,11 @@
+"""
+Call the haplotypes util GATK's HaplotypeCaller in GVCF mode.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 from snakemake.shell import shell
 from snakemake_wrapper_utils.java import get_java_opts
 

@@ -1,3 +1,11 @@
+"""
+Plot frequency distribution for values of Tajima's D.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import plot_utils
 
 try:

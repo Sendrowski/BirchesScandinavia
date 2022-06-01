@@ -1,3 +1,11 @@
+"""
+Visualize LRT comparisons of demographic models.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import matplotlib.pyplot as plt
 import pandas as pd
 

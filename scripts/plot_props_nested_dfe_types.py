@@ -1,3 +1,11 @@
+"""
+Visualize LRT comparisons of different DFE models.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib import cycler

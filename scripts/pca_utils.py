@@ -1,3 +1,11 @@
+"""
+Utils for plotting PCA graphs or similar.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import numpy as np

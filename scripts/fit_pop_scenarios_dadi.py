@@ -1,3 +1,11 @@
+"""
+Run MLE for specified demographic scenario using dadi.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import dadi
 
 import demographic_scenarios

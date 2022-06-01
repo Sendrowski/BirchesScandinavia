@@ -1,3 +1,6 @@
+###
+# Compare nested models with polyDFE.
+###
 
 if (exists('snakemake')) {
     full_anc = snakemake@input[['full_anc']]

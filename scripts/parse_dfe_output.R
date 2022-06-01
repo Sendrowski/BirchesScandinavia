@@ -1,3 +1,6 @@
+###
+# Parse polyDFE output.
+###
 
 if (exists('snakemake')) {
     input = snakemake@input[[1]]

@@ -1,3 +1,12 @@
+"""
+Plot a frequency distribution for site-wise Fst values.
+The input file was generated with VCFtools.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import plot_utils
 
 try:

@@ -1,3 +1,11 @@
+"""
+Plot the cross-validation error for ADMIXTURE.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import re
 
 import matplotlib.pyplot as plt

@@ -1,3 +1,13 @@
+"""
+Annotate the VCF with regards to the ancestral alleles.
+An AA info tag will added in addition to further information.
+This is same tag dadi looks for when parsing a unfolded SFS.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 from collections import Counter
 
 import vcf

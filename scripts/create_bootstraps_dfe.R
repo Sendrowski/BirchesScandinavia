@@ -1,3 +1,6 @@
+###
+# Bootstrap data using polyDFE.
+###
 
 if (exists('snakemake')) {
     input = snakemake@input[[1]]

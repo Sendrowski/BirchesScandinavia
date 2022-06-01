@@ -1,3 +1,11 @@
+"""
+Create pairwise lists of linkage disequilibrium using PLINK.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import os.path
 
 from snakemake.shell import shell

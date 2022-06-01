@@ -1,3 +1,11 @@
+"""
+Determine confidence intervals from bootstrapped data for dadi.
+"""
+
+__author__ = "Janek Sendrowski"
+__contact__ = "j.sendrowski18@gmail.com"
+__date__ = "2022-05-31"
+
 import numpy as np
 import pandas as pd
 
