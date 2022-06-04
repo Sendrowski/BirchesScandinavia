@@ -2,11 +2,13 @@
 
 \usepackage[utf8]{inputenc}
 
-\usepackage{parskip,textgreek,amsmath,graphicx,hyperref,bookmark,caption,subcaption,relsize,float,array,csvsimple,pgffor,eso-pic,xcolor}
+\usepackage{parskip,textgreek,amsmath,graphicx,hyperref,bookmark,caption,subcaption,relsize,float,array,csvsimple,pgffor,eso-pic,xcolor,titling}
 
 \usepackage[nottoc,numbib]{tocbibind}
 
 \usepackage[overlay,absolute]{textpos}
+
+\usepackage[toc,page]{appendix}
 
 \usepackage[british]{babel}
 \usepackage[useregional]{datetime2}
@@ -425,13 +427,6 @@
     doi = {10.12688/f1000research.29032.2}
     }
 
-    @misc{github-repo,
-    author = {Janek Sendrowski},
-    title = {Code and supplementary material},
-    year = {2022},
-    howpublished = {\url{https://github.com/Sendrowski/BirchesScandinavia}}
-    }
-
     @article{pi-spruce,
     author = {Chen, Jun and Li, Lili and Milesi, Pascal and Jansson, Gunnar and Berlin, Mats and Karlsson, B. and Aleksić, Jelena and Giovanni Giuseppe, Vendramin and Lascoux, Martin},
     year = {2019},
@@ -495,20 +490,56 @@
     \maketitle
 
     \clearpage
-
-    \begin{acknowledgements}
-        I would like to express my thanks to my supervisor Martin Lascoux for helpful feedback, reading material, personal lectures and a conducive working atmosphere. I would also like to thank my co-supervisor Jennifer James for advising me on potential tools, helping create the project outline and kindly listening to my progress reports. At last, I also owe thanks to Luis Leal for a detailed introduction to the underlying data and useful recommendations.
-    \end{acknowledgements}
-
-    \clearpage
-
-    \pagenumbering{arabic}
+    \shipout\null
 
     \begin{abstract}
         Boreal forests are particularly vulnerable to climate change, experiencing a much more drastic increase in temperatures and having a limited amount of more northern refugia. The trees making up these vast and important ecosystems already had to adapt previously to environmental pressures brought about by the repeated glaciations during past ice ages. Studying the patterns of adaption of these trees can thus provide valuable insights on how to mitigate future damage. This thesis presents and analyses population structure, demographic history and the distribution of fitness effects (\acrshort{dfe}) of the diploid \textit{Betula pendula} and tetraploid \textit{B. pubescens} across Scandinavia. Birches--being widespread in boreal forests as well as having great economical importance--constitute superb model species. The analyses of this work confirm the expectations on postglacial population expansion and diploid-tetraploid introgression. They furthermore ascertain the presence of two genetic clusters and a remarkably similar \acrshort{dfe} for the species. This work also contributes with a transparent, reproducible and reusable pipeline which facilitates running similar analyses for related species.
     \end{abstract}
 
     \clearpage
+    \shipout\null
+
+    \newgeometry{margin={7.75em, 0em}}
+    \begingroup
+    \fontsize{10pt}{12pt}\selectfont
+
+    \setlength{\droptitle}{-1em}
+    \title{Future of Birch Populations across Scandinavia\\
+    \vspace{0.3em}
+    \Large Popular Science Summary\\
+    \vspace{0.3em}
+    Janek Sendrowski}
+    \date{}
+    \begin{textblock}{10}(2.21,14.37)
+        \begin{flushleft}
+            \rule{44.48em}{1pt} \\
+            \vspace{-0.02cm}
+            \fontsize{9pt}{10.5pt}\color{gray}\textbf{Degree project in bioinformatics 30 hp, 2022 \\
+            Biology Education Centre and Department of Ecology and Genetics, \\
+            Uppsala University Supervisors: Martin Lascoux and Jennifer James \\}
+        \end{flushleft}
+    \end{textblock}
+
+    \pagenumbering{gobble}
+    \maketitle
+    \vspace{-4.5em}
+    Boreal forests are particularly vulnerable to climate change, experiencing a much more drastic increase in temperatures. The trees making up these vast and important ecosystems already had to adapt previously to environmental pressures brought about by the repeated glaciations during past ice ages. Studying the patterns of adaption of these trees can thus provide valuable insights on how to mitigate future damage. In this thesis, the structure of silver-  and downy birch populations across Scandinavia were scrutinised. The resulting understanding can lead to better management and insight on the ability of these species to adapt to future challenges.
+
+    The silver birch, easily recognised by its eponymous silverish bark and sometimes pendulous leaves, is rather common in Europe and of great economical importance in Scandinavia, being used for timber. The downy birch, named after its downy shoots in juvenile state, is more likely encountered in the north where it gradually replaces the less cold-resistant cousin, the silver birch.
+
+    One of the most remarkable characteristics is that both species display a two-split population structure with a northern and a southern subpopulation. The boundary of these subpopulations interestingly coincides with a transitions from humid continental climate in the south to subarctic climate in the north. A similar boundary was actually found in Norway spruce in another study and it is likely that this structure is maintained because these subpopulations are better adapted to their respective climatic environments. However, the actual origin of the subpopulation structure may be due to the recolonisation of populations from different sources after the retreat of the ice sheets. The population expansion experienced after the last ice age can also leave behind a detectable genetic signature which was confirmed in this study.
+
+    One important aspect when designing breeding strategies for silver birch for example is whether it can produce offspring with other birch species so that populations can take up genetic material from them. This uptake could aid in adapting to new challenges posed by the environment but it also complicates management considerably as it is required to keep track of several species and their relationships to get a more complete picture. One speciality of downy birches is that they possess four copies of the genetic markup instead of the more commonly found two copies present in silver birch and also in humans. This additional redundancy can provide some adaptive advantages but presents an obstacle to the interbreeding with silver birch. However, the analyses of this work approve that it is possible for some genetic material of silver birch to make its way into downy birch but not vice versa.
+
+    The origins of the genetic architecture of downy birch are difficult to trace back but at some point in the past, the genetic material of one species was duplicated or that of two different species fused to give rise to its ancestor. Some evidence indicates that the duplication of a species very similar to today's silver birch gave rise to downy birch. This hypothesis is strengthened by an analysis which reveals that the impact new mutations have on their carriers' fitness is remarkably similar between the two species. Another important aspect is to find out whether our species harbour a large amount of disadvantageous mutations. This can be a sign that the population is in ill heath and in decline. As it turns out, there is no cause of concern with the amount of such mutations being low in comparison to other tree species like conifers.
+
+    To summarise, this work confirmed the existence of two genetic clusters in each species, the unidirectional transfer of genetic material from silver birch into downy birch, and population expansion after the last ice age. The distribution of the effect size of new mutations between the two species is also surprisingly similar and the amount of disadvantageous mutations seems acceptable. There is thus hope that these species will be able to adapt to future environmental challenges and that the silver birch continues being a good and sustainable resource for timber. Much remains to be done to unravel the complex interplay and history of these rather flexible species whose prosperity is crucial to a functioning boreal ecosystem.
+
+    \endgroup
+    \clearpage
+    \restoregeometry
+    \shipout\null
+
 
     \tableofcontents
     \thispagestyle{empty}
@@ -517,6 +548,7 @@
     \printglossary[type=\acronymtype,title=Acronyms,toctitle=Acronyms]
 
     \clearpage
+    \shipout\null
 
     \listoffigures
 
@@ -527,9 +559,9 @@
     \thispagestyle{empty}
 
     \clearpage
+    \shipout\null
 
     \pagenumbering{arabic}
-
 
     \section{Introduction}
     \label{sec:introduction}
@@ -548,12 +580,12 @@
 
     Birches are rather common in cool temperate and boreal forests which in turn constitute a large fraction of the global forest cover \cite{multispecies-structure-birch}. Boreal forests are particularly vulnerable to global warming as temperatures are projected to increase much more drastically in the north and as there may be no cooler refugia to retreat to northward \cite{jarkko}. Birches are moreover of economical importance, being used for timber \cite{multispecies-structure-birch}. This profile makes them excellent model species in the context of climate change and studying past patterns of migration and adaptation of these large, slowly growing and dispersing species could aid in predicting of what is likely to happen to such species as climate conditions change in the future.
 
-    This thesis is also of importance to the understanding of population structure and demographic history of birch in particular and will, apart from this written report, contribute with a transparent analysis pipeline that will be made publicly available on GitHub \cite{github-repo}. Both of which will hopefully be useful to collaborators and others in the field.
+    This thesis is also of importance to the understanding of population structure and demographic history of birch in particular and will, apart from this written report, contribute with a transparent analysis pipeline that is made publicly available on GitHub (\url{https://github.com/Sendrowski/BirchesScandinavia}). Both of which will hopefully be useful to collaborators and others in the field.
 
-    \subsection{Objectives \& Report Outline}
+    \subsection{Aims \& Report Outline}
     \label{sec:objectives}
 
-    The goals of the project can be broken down into three parts. At first, we look at geographic differentiation, migration and isolation by distance, which we compare with established results from literature (cf. section \ref{sec:population-structure}). Subsequently, models of the demographic history are fit to the data. Relevant demographic models will have to be determined beforehand. The inferred demography is then checked for accordance with the expectations (cf. section \ref{sec:demographic-history}). At last, the \acrfull{dfe} will be estimated and compared for all samples as a whole as well as between different subpopulations. We will also compare \acrshort{dfe} models with different assumptions regarding their shape (cf. section \ref{sec:dfe}).
+    The goals of the project can be broken down into three parts. At first, we look at geographic differentiation, migration and isolation by distance, which we compare with established results from literature (cf. section \ref{sec:population-structure}). Subsequently, models of the demographic history are fit to the data. Relevant demographic models will have to be determined beforehand. The inferred demography is then checked for accordance with the expectations (cf. section \ref{sec:demographic-history}). At last, the \acrfull{dfe} is estimated and compared for all samples as a whole as well as between different subpopulations. We also compare \acrshort{dfe} models with different assumptions regarding their shape (cf. section \ref{sec:dfe}).
 
     The three above-mentioned parts are preceded by this introductory part, presenting background, importance and expectations (cf. section \ref{sec:introduction}). This is followed by an introduction to the underlying data, an outline of the workflow and pipeline as well as some basic summary statistics like nucleotide diversity and heterozygosity that could not be properly placed elsewhere ({cf. section \ref{sec:basics}). Before proceeding with the actual analyses, the derivation of the site frequency spectra (\acrshort{sfs}) is discussed which is essential for the inference of demography and \acrshort{dfe} (cf. section \ref{sec:sfs-derivation}). In this section we will also treat the identification of ancestral alleles as well as the different degeneracy and synonymy classes which are all necessary for the derivation of the \acrshort{sfs}.
 
@@ -571,21 +603,13 @@
 
     \clearpage
 
-
     \section{Basics}
     \label{sec:basics}
 
     \subsection{Pipeline}
     \label{sec:pipeline}
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=\textwidth]{default/graphs/png/rulegraphs/schematics/subworkflows.png}
-        \caption{A schematic of the pipeline's subworkflows. Each subworkflow can be executed independently. The \acrshort{vcf} filtering relies on the previous annotation of the \acrshort{vcf} files as well as the derived sample sets (i.e. which individuals to include). The lowermost subworkflows only require a \acrshort{vcf} file and possibly some sample metadata and subpopulation information.}
-        \label{fig:subworkflows}
-    \end{figure}
-
-    The brunt of the working time was concerned with the implementation of a pipeline to perform the various analyses \cite{github-repo}. A scalable, parallelised and fully-automatic pipeline was implemented using Snakemake for workflow management which ensures reproducibility, integrability, portability and seamless integration with Python \cite{snakemake}. The package manager Conda is used for all non-trivial dependencies. The pipeline was successfully tested on both Linux and Darwin (macOS), with the exception of EST-SFS whose code did not compile well on Darwin and polyDFE which is only offered for Linux on Conda, despite executables for Darwin being available elsewhere. Most resource-intensive tasks were run on Uppmax (Uppsala University's computing center). The pipeline is divided into several subworkflows whose structure is apparent from fig.~\ref{fig:subworkflows}. Each subworkflow can be executed independently and care was taken to provide an easy interface of input files.
+    The brunt of the working time was concerned with the implementation of a pipeline to perform the various analyses (cf. \url{https://github.com/Sendrowski/BirchesScandinavia}). A scalable, parallelised and fully automatic pipeline was implemented using Snakemake for workflow management which ensures reproducibility, integrability, portability and seamless integration with Python \cite{snakemake}. The package manager Conda is used for all non-trivial dependencies. The pipeline was successfully tested on both Linux and Darwin (macOS), with the exception of EST-SFS whose code did not compile well on Darwin and polyDFE which is only offered for Linux on Conda, despite executables for Darwin being available elsewhere. Most resource-intensive tasks were run on Uppmax (Uppsala University's computing center). The pipeline is divided into several subworkflows whose components are apparent in fig.~\ref{fig:subworkflows}. Each subworkflow can be executed independently and care was taken to provide an easy interface of input files.
 
     \subsection{Data}
     \label{sec:data}
@@ -621,7 +645,7 @@
         \label{fig:workflow_schematic}
     \end{figure}
 
-    Fig.~\ref{fig:workflow_schematic} shows a schematic of the pipeline's workflow. All analyses are based on bi-allelic \acrshort{snp} data whose derivation is as follows: The initial short reads were trimmed with Trimmomatic, mainly to remove the adapter sequences whence their quality was confirmed with FastQC \cite{trimmomatic,fastqc}. The mapping was done with \acrshort{bwa} using the \pendula{} reference genome \cite{ref-genome}. In doing so, we also expect to capture most variation within \pubescens{} whose polyploid origin likely involved \pendula{} (cf. section \ref{sec:species}). We then jointly called the variants using \acrshort{gatk}'s GVCF workflow to obtain a raw \acrshort{vcf} file (including monomorphic sites) \cite{gatk}. The variant calling was done twice: once treating all samples as diploid and once specifying their proper ploidy (\pubescens{} is tetraploid). This was done as some analyses cannot handle polyploid individuals. The resulting variants were subsequently hard-filtered according to \acrshort{gatk}'s best practices. The sites were then annotated with regards to their degeneracy and synonymy using custom scripts and the ancestral alleles were inferred with EST-SFS \cite{est-sfs}. All time-consuming tasks were parallelised to make the pipeline more efficient and scalable. The resulting annotated \acrshort{vcf} file was then used for the derivation of various sample sets that we used for further analyses. For each sample set configuration a separate \acrshort{vcf} file was created in order to easily run analyses over different sample sets. Sites with more than 50\% of missing values were removed from the sample sets if not specified otherwise. We then began by calculating some basic summary statistics like nucleotide diversity $\pi$, fixation index $F_{ST}$ and Tajima's $D$. The population structure was visualised with \acrshort{pca} and \acrshort{umap} (a non-linear dimension reduction technique) \cite{umap}. Migration surfaces were estimated with \acrshort{feems} \cite{feems}. Thereafter, we modelled the demographic history where \dadi{} was used to perform \acrfull{mle} on various demographic models which we were required to specify explicitly \cite{dadi}. Subsequently, polyDFE, which is also \acrshort{sfs}-based, was used to estimate the \acrfull{dfe} for different subpopulations which we then compared to each other \cite{polydfe}. For both analyses, we needed to differentiate between synonymous and non-synonymous sites to obtain a \acrfull{sfs} for each class. To additionally infer the \acrshort{dfe} for beneficial mutations and to increase the accuracy of the demographic modelling, we also needed to derive an unfolded \acrshort{sfs} by distinguishing between ancestral and derived alleles.
+    A schematic of the pipeline's workflow is shown in fig.~\ref{fig:workflow_schematic}. All analyses are based on bi-allelic \acrshort{snp} data whose derivation is as follows: The initial short reads were trimmed with Trimmomatic, mainly to remove the adapter sequences whence their quality was confirmed with FastQC \cite{trimmomatic,fastqc}. The mapping was done with \acrshort{bwa} using the \pendula{} reference genome \cite{ref-genome}. In doing so, we also expect to capture most variation within \pubescens{} whose polyploid origin likely involved \pendula{} (cf. section \ref{sec:species}). We then jointly called the variants using \acrshort{gatk}'s GVCF workflow to obtain a raw \acrshort{vcf} file (including monomorphic sites) \cite{gatk}. The variant calling was done twice: once treating all samples as diploid and once specifying their proper ploidy (\pubescens{} is tetraploid). This was done as some analyses cannot handle polyploid individuals. The resulting variants were subsequently hard-filtered according to \acrshort{gatk}'s best practices. The sites were then annotated with regards to their degeneracy and synonymy using custom scripts and the ancestral alleles were inferred with EST-SFS \cite{est-sfs}. All time-consuming tasks were parallelised to make the pipeline more efficient and scalable. The resulting annotated \acrshort{vcf} file was then used for the derivation of various sample sets that we used for further analyses. For each sample set configuration a separate \acrshort{vcf} file was created in order to easily run analyses over different sample sets. Sites with more than 50\% of missing values were removed from the sample sets if not specified otherwise. We then began by calculating some basic summary statistics like nucleotide diversity $\pi$, fixation index $F_{ST}$ and Tajima's $D$. The population structure was visualised with \acrshort{pca} and \acrshort{umap} (a non-linear dimension reduction technique) \cite{umap}. Migration surfaces were estimated with \acrshort{feems} \cite{feems}. Thereafter, we modelled the demographic history where \dadi{} was used to perform \acrfull{mle} on various demographic models which we were required to specify explicitly \cite{dadi}. Subsequently, polyDFE, which is also \acrshort{sfs}-based, was used to estimate the \acrfull{dfe} for different subpopulations which we then compared to each other \cite{polydfe}. For both analyses, we needed to differentiate between synonymous and non-synonymous sites to obtain a \acrfull{sfs} for each class. To additionally infer the \acrshort{dfe} for beneficial mutations and to increase the accuracy of the demographic modelling, we also needed to derive an unfolded \acrshort{sfs} by distinguishing between ancestral and derived alleles.
 
     \subsection{Nucleotide Diversity}
     \label{sec:pi}
@@ -646,56 +670,56 @@
     \subsection{Heterozygosity}
     \label{sec:het}
 
-    \begin{figure}[ht]
-        \centering
-        \begin{subfigure}[b]{0.485\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{default/graphs/png/heterozygosity/pendula/all/het.log.png}
-            \caption{\pendula{}}
-            \label{fig:het_pendula}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.485\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{default/graphs/png/heterozygosity/pubescens/all/het.log.png}
-            \caption{\pubescens{}}
-            \label{fig:het_pubescens}
-        \end{subfigure}
-        \caption{Expected (under \acrshort{hwe}) and observed site-wise heterozygosity over the set of bi- and mono-allelic sites. The observed excess heterozygosity for \pubescens{} is caused by calling it as diploid. The expected site-wise heterozygosity is equivalent to the nucleotide diversity $\pi$. The dashed vertical lines indicate the average heterozygosities. Note that these plots are log-scaled. Linearly scaled plots can be found in the appendix (cf. fig.~\ref{fig:het_linear})}
-        \label{fig:het}
-    \end{figure}
-
-    The heterozygosity at a given locus describes the fraction of individuals that are heterozygous there. An expected heterozygosity $H$ can be calculated from a site's allele frequency assuming it is in \acrfull{hwe}. We have $H_i = 2p_i(1-p_i)$ where $p_i$ is the frequency of any allele at the $i$th bi-allelic site \cite{gillespie}. This is exactly the same formula as for the nucleotide diversity. However, in contrast, when calculating the actual observed heterozygosity we confine our comparison to the two loci within each diploid individual to see how they associate. Fig.~\ref{fig:het} shows the expected and observed heterozygosities for both species. By far most sites have values of $0$ as they are monomorphic. Under \acrshort{hwe}, at most half of all individuals are expected to be heterozygous provided that the sample size is greater than 1. $H_i$ thus ranges from $0$ to $0.5$ where $0.5$ is the theoretical maximum attained for $p = 0.5$. The observed heterozygosity exceeds $0.5$ in some cases which is expected due to sampling variance but can, in principle, be indicative of outbreeding or heterozygote advantage if it does so consistently. An excess of homozygotes is more common, however, and can be caused by dynamics like inbreeding or population structure \cite{gillespie}. For \pendula{}, the average observed heterozygosity is, in fact, slightly lower than its expectation (cf. fig.~\ref{fig:het_pendula}). This can partly be caused by non-random mating due to isolation by distance which is expected for stationary species of large geographical extend. In any case, the two distributions are in rather good agreement (note the logarithmic scale). \pubescens{}'s average observed heterozygosity, however, significantly exceeds its expectation which is, at least in part, due the bias introduced by calling it as a diploid (cf. fig.~\ref{fig:het_pubescens}). More precisely, it is caused by neglecting that polyploids are more likely to be heterozygous than diploids and by the overestimation of the frequency of rare alleles (cf. section \ref{sec:sfs} for a more detailed explanation). Fig.~\ref{fig:p_hwe} shows site-wise p-values for the observed heterozygosity under \acrlong{hwe}. Both the heterozygosity and p-values were calculated using PLINK \cite{plink, hwe-plink}.
+    The heterozygosity at a given locus describes the fraction of individuals that are heterozygous there. An expected heterozygosity $H$ can be calculated from a site's allele frequency assuming it is in \acrfull{hwe}. We have $H_i = 2p_i(1-p_i)$ where $p_i$ is the frequency of any allele at the $i$th bi-allelic site \cite{gillespie}. This is exactly the same formula as for the nucleotide diversity. However, in contrast, when calculating the actual observed heterozygosity we confine our comparison to the two loci within each diploid individual to see how they associate. A frequency distribution of the expected and observed heterozygosities for the two species can be found in the appendix (cf. fig.~\ref{fig:het}). By far most sites have values of $0$ as they are monomorphic. Under \acrshort{hwe}, at most half of all individuals are expected to be heterozygous provided that the sample size is greater than 1. $H_i$ thus ranges from $0$ to $0.5$ where $0.5$ is the theoretical maximum attained for $p = 0.5$. The observed heterozygosity exceeds $0.5$ in some cases which is expected due to sampling variance but can, in principle, be indicative of outbreeding or heterozygote advantage if it does so consistently. An excess of homozygotes is more common, however, and can be caused by dynamics like inbreeding or population structure \cite{gillespie}. For \pendula{}, the average observed heterozygosity is, in fact, slightly lower than its expectation (cf. fig.~\ref{fig:het_pendula}). This can partly be caused by non-random mating due to isolation by distance which is expected for stationary species of large geographical extend. In any case, the two distributions are in rather good agreement (note the logarithmic scale). \pubescens{}'s average observed heterozygosity, however, significantly exceeds its expectation which is, at least in part, due the bias introduced by calling it as a diploid (cf. fig.~\ref{fig:het_pubescens}). More precisely, it is caused by neglecting that polyploids are more likely to be heterozygous than diploids and by the overestimation of the frequency of rare alleles (cf. section \ref{sec:sfs} for a more detailed explanation). Site-wise p-values for the observed heterozygosity under \acrlong{hwe} can be found in fig.~\ref{fig:p_hwe}. Both the heterozygosity and p-values were calculated using PLINK \cite{plink, hwe-plink}.
 
     \clearpage
 
 
     \section{Derivation of Site-Frequency Spectra}
     \label{sec:sfs-derivation}
-
-    The \acrfull{sfs} is a powerful summary statistic of bi-allelic \acrshort{snp} variation. It provides information on the number of sites in each frequency class, i.e. $\xi = (\xi_i)^n_{i=0}$ where $\xi_i$ denotes the number of \acrshort{snp}s for which $i$ out of $n$ alleles are derived, i.e. not ancestral (cf. fig.~\ref{fig:sfs_1d}). This is the definition of a so-called unfolded \acrshort{sfs} as it distinguishes sites with $i$ ancestral alleles from sites with $i$ derived alleles (cf. folded \acrshort{sfs} where frequency classes with $i$ and $n-i$ derived variants are collapsed). Unfolded spectra are much more informative. For example, they provide information on the number of high-frequency derived alleles which--when numerous--can be indicative of positive selection or population expansion. Both \dadi{} and polyDFE obtain their information by means of an \acrshort{sfs} and many summary statistics like $S$, $\pi$, $F_{ST}$ and Tajima's $D$ can be directly computed from it.
-
-    \subsection{Ancestral State Identification}
-    \label{sec:ancestral-identification}
-
+    
     \begin{figure}[ht]
         \centering
-        \begin{subfigure}[b]{0.52\textwidth}
+        \begin{subfigure}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/est-sfs.50.unfolded.linear.png}
-            \caption{linear}
-            \label{fig:est_sfs_linear}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula/0fold_4fold/sfs.1D.20.unfolded.linear_tight_layout.png}
+            \caption{\pendula{}}
+            \label{fig:sfs_1d_pendula}
         \end{subfigure}
-        \hspace{-2em}
-        \begin{subfigure}[b]{0.52\textwidth}
+        \hfill
+        \begin{subfigure}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/est-sfs.50.unfolded.log.png}
-            \caption{log-scaled}
-            \label{fig:est_sfs_log}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pubescens/0fold_4fold/sfs.1D.20.unfolded.linear_tight_layout.png}
+            \caption{\pubescens{}}
+            \label{fig:sfs_1d_pubescens}
         \end{subfigure}
-        \caption{Linear and log-scaled site-frequency spectrum inferred with EST-SFS by using 50 ingroup and two outgroup samples. The spectrum is relatively smooth which was not the case for smaller sets of \acrshort{snp}s or a larger number of ingroup samples.}
-        \label{fig:est_sfs}
+        \par\bigskip
+        \centering
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula_pubescens/biallelic/sfs.2D.20.png}
+            \caption{both species}
+            \label{fig:sfs_2d_pendula_pubescens}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula/biallelic/sfs.2D.20.png}
+            \caption{\pendula{}}
+            \label{fig:sfs_2d_pendula}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pubescens/biallelic/sfs.2D.20.png}
+            \caption{\pubescens{}}
+            \label{fig:sfs_2d_pubescens}
+        \end{subfigure}
+        \caption{One- and two-dimensional unfolded site-frequency spectra down-projected to a sample size of 20. For the 1D case, we distinguish between 0- and 4-fold degenerate sites. We see that \pendula{} has many more high-frequency derived alleles than \pubescens{}. The ascertainment of the subpopulations shown on the axes of the 2D spectra is presented in the following section.}
+        \label{fig:sfs}
     \end{figure}
+
+    The \acrfull{sfs} is a powerful summary statistic of bi-allelic \acrshort{snp} variation. It provides information on the number of sites in each frequency class, i.e. $\xi = (\xi_i)^n_{i=0}$ where $\xi_i$ denotes the number of \acrshort{snp}s for which $i$ out of $n$ alleles are derived, i.e. not ancestral (cf. fig.~\ref{fig:sfs}). This is the definition of a so-called unfolded \acrshort{sfs} as it distinguishes sites with $i$ ancestral alleles from sites with $i$ derived alleles (cf. folded \acrshort{sfs} where frequency classes with $i$ and $n-i$ derived variants are collapsed). Unfolded spectra are much more informative. For example, they provide information on the number of high-frequency derived alleles which--when numerous--can be indicative of positive selection or population expansion. Both \dadi{} and polyDFE obtain their information by means of an \acrshort{sfs} and many summary statistics like $S$, $\pi$, $F_{ST}$ and Tajima's $D$ can be directly computed from it.
 
     In order to obtain an unfolded \acrshort{sfs}, we first need to infer the ancestral alleles which we did with the help of EST-SFS \cite{est-sfs}. For the inference, 50 ingroup and two outgroup samples were used which resulted in an \acrshort{sfs} that was sufficiently smooth. The ingroup subsampling was done without replacement whenever possible and both birch species were used as we deemed them sufficiently close in comparison to the outgroup species. The Kimura 2-parameter nucleotide substitution model was used according to the article's recommendation. There were initial problems determining the ancestral variants. EST-SFS calculates separate prior probabilities for each frequency class based on the maximum likelihood of the tree topologies for the two different ancestral states. This is being done to correct for the fact that high-frequency derived alleles are much less common than high-frequency ancestral ones (e.g. due to having more slightly deleterious mutations at low frequencies that have not yet been removed by purifying selection). The large variance of the number of samples among the frequency classes caused the prior to favour high-frequency derived alleles in some cases. This was especially true for small chunks of \acrshort{vcf} files that were initially used for the purpose of parallelisation. Choosing a larger number of ingroup samples also caused the variance to increase as we then have even more frequency classes containing fewer samples, each class receiving its own prior. On the other hand, reducing the ingroup sample size too much would introduce a lot of sampling variance. A moderate number of samples (i.e. 50) in addition to using all available \acrshort{snp}s at once, provided an \acrshort{sfs} that was sufficiently smooth (cf. fig.~\ref{fig:est_sfs}).
 
@@ -728,59 +752,13 @@
     \subsection{Site Frequency Spectrum}
     \label{sec:sfs}
 
-    \begin{figure}[ht]
-        \centering
-        \begin{subfigure}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula/0fold_4fold/sfs.1D.20.unfolded.linear_tight_layout.png}
-            \caption{\pendula{}}
-            \label{fig:sfs_1d_pendula}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pubescens/0fold_4fold/sfs.1D.20.unfolded.linear_tight_layout.png}
-            \caption{\pubescens{}}
-            \label{fig:sfs_1d_pubescens}
-        \end{subfigure}
-        \caption{Unfolded site-frequency spectra for 0-fold and 4-fold degenerate sites down-projected to a sample size of 20. \pendula{} has many more high-frequency derived alleles than \pubescens{}.}
-        \label{fig:sfs_1d}
-    \end{figure}
-
-    Unfolded site-frequency spectra for 0-fold and 4-fold degenerate sites down-projected to a sample size of 20 are shown in fig.~\ref{fig:sfs_1d}. Interestingly, \pendula{} has many more high-frequency derived alleles for both classes. This u-shape can, in theory, be explained by population expansion, population structure, multiple-merger coalescents or gene flow from disparate populations \cite{u-shape-gene-flow}. In the case of gene flow, we would rather expect \pubescens{} to have a u-shaped spectrum as we expect it to have a higher introgression rate. Population structure is unlikely to be the culprit either as not a lot of it can be found in birch. Another explanation could be ancestral misidentification but both species are based on the same ancestral states and \pubescens{} rather exhibits a deficit of high-frequency derived alleles. \pubescens{} furthermore has a relatively large amount of low-frequency derived alleles potentially owing to reduced purifying selection brought about by higher gene redundancy.
+    Unfolded site-frequency spectra for 0-fold and 4-fold degenerate sites down-projected to a sample size of 20 are shown in fig.~\ref{fig:sfs}. Interestingly, \pendula{} has many more high-frequency derived alleles for both classes. This u-shape can, in theory, be explained by population expansion, population structure, multiple-merger coalescents or gene flow from disparate populations \cite{u-shape-gene-flow}. In the case of gene flow, we would rather expect \pubescens{} to have a u-shaped spectrum as we expect it to have a higher introgression rate. Population structure is unlikely to be the culprit either as not a lot of it can be found in birch. Another explanation could be ancestral misidentification but both species are based on the same ancestral states and \pubescens{} rather exhibits a deficit of high-frequency derived alleles. \pubescens{} furthermore has a relatively large amount of low-frequency derived alleles potentially owing to reduced purifying selection brought about by higher gene redundancy.
 
     Treating \pubescens{} as diploid when calling the variants biased the SFS toward having more intermediate- and fewer low-frequency alleles (cf. fig.~\ref{fig:sfs_ploidy_calling_differences}). This is easiest explained by observing that low-frequency alleles will likely only have one copy in heterozygous individuals (assuming no strong deviation from \acrshort{hwe}). Treating these individuals as diploid assumes that half of their haplotypes contain that allele, thus overestimating its frequency. Equivalently, we can say that for low-frequency alleles, the number of occurrences (i.e. roughly one per heterozygote) is counted to be the same but the total number of haplotypes is lower when assuming diploidy instead of a higher ploidy.
 
-    2-dimensional (2D) frequency spectra provide plenty of information on the relatedness of two populations as they encode how their allele frequencies are associated site-wise. In general, the more recent their common ancestry or the more migration, the more sites we find in classes with similar frequencies. In fig.~\ref{fig:sfs_2d}, we can see down-projected 2D frequency spectra for different sample sets. The spectrum in fig.~\ref{fig:sfs_2d_pendula_pubescens} is rather spread-out, i.e. very disparate frequencies can be observed per site, which is indicative of little migration or relatedness. This makes perfect sense as we are looking at two separate species here and is in strong contrast with the spectra for \pendula{} and \pubescens{} whose subpopulations are highly admixed (cf. fig.~\ref{fig:sfs_2d_pendula} \& \ref{fig:sfs_2d_pubescens}). These spectra also show much more symmetry about the line $x=y$, indicating similar allele frequencies in both populations.
-
-    \begin{figure}[ht]
-        \centering
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula_pubescens/biallelic/sfs.2D.20.png}
-            \caption{both species}
-            \label{fig:sfs_2d_pendula_pubescens}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pendula/biallelic/sfs.2D.20.png}
-            \caption{\pendula{}}
-            \label{fig:sfs_2d_pendula}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/pubescens/biallelic/sfs.2D.20.png}
-            \caption{\pubescens{}}
-            \label{fig:sfs_2d_pubescens}
-        \end{subfigure}
-        \caption{Unfolded 2D site-frequency spectra whose subpopulations are shown on the axes. The ascertainment of these subpopulations is presented in the following section.}
-        \label{fig:sfs_2d}
-    \end{figure}
+    2-dimensional (2D) frequency spectra provide plenty of information on the relatedness of two populations as they encode how their allele frequencies are associated site-wise. In general, the more recent their common ancestry or the more migration, the more sites we find in classes with similar frequencies. In fig.~\ref{fig:sfs}, we can also see down-projected 2D frequency spectra for different sample sets. The spectrum in fig.~\ref{fig:sfs_2d_pendula_pubescens} is rather spread-out, i.e. very disparate frequencies can be observed per site, which is indicative of little migration or relatedness. This makes perfect sense as we are looking at two separate species here and is in strong contrast to the spectra for \pendula{} and \pubescens{} whose subpopulations are highly admixed (cf. fig.~\ref{fig:sfs_2d_pendula} \& \ref{fig:sfs_2d_pubescens}). These spectra also show much more symmetry about the line $x=y$, indicating similar allele frequencies in both populations.
 
     \clearpage
-
 
     \section{Population Structure}
     \label{sec:population-structure}
@@ -790,7 +768,7 @@
     \subsection{PCA \& UMAP}
     \label{sec:pca-umap}
 
-    \begin{figure}[ht]
+    \begin{figure}[!htbp]
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
@@ -805,13 +783,7 @@
             \caption{\acrshort{umap}}
             \label{fig:umap_pendula_pubescens}
         \end{subfigure}
-        \caption{\acrshort{pca} and \acrshort{umap} plots on the set of bi-allelic sites for \pendula{} and \pubescens{}. There is a clear separation between both species. For \acrshort{umap}, the \texttt{spread} and \texttt{min\_dist} parameters were set to 2 and 1.5, respectively.}
-        \label{fig:pca_umap_pendula_pubescens}
-    \end{figure}
-
-    \acrfull{pca} employs linear dimensionality reduction thus retaining the proportions among distances and providing information on how much of the total variance is accounted for by each dimension. The \acrfull{umap} analysis is more customisable at the cost of interpretability as the principal dimensions need not be linear. Fig.~\ref{fig:pca_umap_pendula_pubescens} shows \acrshort{pca} and \acrshort{umap} plots for both species considered in tandem, and whose sites where restricted to be bi-allelic. There is a clear delineation separating the species indicating that hybrids are relatively rare (with the exception of one or two intermediate samples). Considering the \acrshort{pca} plot, we see that roughly 20\% of the total variance is explained by the type of species. The second principal component is much smaller with 1\% and seems to account for latitudinal differentiation in \pubescens{}. The \acrshort{umap} plot looks similar but allows for a more detailed picture within each species brought about by specifying a minimum distance between samples (cf. fig.~\ref{fig:umap_pendula_pubescens}). Here we can also observe weak latitudinal differentiation for \pendula{}.
-
-    \begin{figure}[ht]
+        \par\bigskip
         \centering
         \begin{subfigure}[b]{0.492\textwidth}
             \centering
@@ -826,46 +798,22 @@
             \caption{\pubescens{}}
             \label{fig:pca_synonymous_pubescens}
         \end{subfigure}
-        \caption{\acrshort{pca} plots on the set of synonymous sites for each of the two birch species. Two clusters are apparent for each species, especially for \pubescens{}.}
-        \label{fig:pca_synonymous_pendula_pubescens_separate}
+        \caption{\acrshort{pca} (\subref{fig:pca_pendula_pubescens}) and \acrshort{umap} (\subref{fig:umap_pendula_pubescens}) plots on the set of bi-allelic sites. There is a clear separation between the two species. For \acrshort{umap}, the \texttt{spread} and \texttt{min\_dist} parameters were set to 2 and 1.5, respectively. There are also \acrshort{pca} plots on the set of synonymous sites for \pendula{} (\subref{fig:pca_synonymous_pendula}) and \pubescens{} (\subref{fig:pca_synonymous_pubescens}), separately. Two clusters are apparent for each species, especially for \pubescens{}.}
+        \label{fig:pca}
     \end{figure}
 
-    The two principal components of the intra-specific plots naturally account for much less of their total variance, being far more homogenous (cf. fig.~\ref{fig:pca_synonymous_pendula_pubescens_separate} where sites were restricted to be synonymous for better visibility). For each species we can roughly see two clusters. This is especially apparent for \pubescens{} where we observe a scarce region between the clusters and along the first principle component (cf. x-axis in fig.~\ref{fig:pca_synonymous_pubescens}). A smooth latitudinal gradient is also apparent along the same component indicating a northern and southern subpopulation. Restricting instead to bi-allelic or non-synonymous sites, the \acrshort{pca} and \acrshort{umap} plots look very similar for \pubescens{} (cf. figs. \ref{fig:pca_pendula_pubescens_separate} - \ref{fig:umap_biallelic_pendula_pubescens_separate}). For \pendula{}, the second principal component varies latitudinally but much less smoothly so (cf. y-axis in fig.~\ref{fig:pca_synonymous_pendula}). Using the set of non-synonymous sites instead, we do not observe any latitudinal gradient along the two principal components (cf. fig.~\ref{fig:pca_nonsynonymous_pendula}). This could indicate that the observed population structure in \pendula{} is more due to past demography and not a result of local adaption . This could be in agreement with the postglacial recolonisation of several distinct populations.
+    \acrfull{pca} employs linear dimensionality reduction thus retaining the proportions among distances and providing information on how much of the total variance is accounted for by each dimension. The \acrfull{umap} analysis is more customisable at the cost of interpretability as the principal dimensions need not be linear. Figs.~\ref{fig:pca_pendula_pubescens} \& \ref{fig:umap_pendula_pubescens} show \acrshort{pca} and \acrshort{umap} plots for bi-allelic sites where both species are considered in tandem. There is a clear delineation separating the species indicating that hybrids are relatively rare (with the exception of one or two intermediate samples). Considering the \acrshort{pca} plot, we see that roughly 20\% of the total variance is explained by the type of species. The second principal component is much smaller with 1\% and seems to account for latitudinal differentiation in \pubescens{}. The \acrshort{umap} plot looks similar but allows for a more detailed picture within each species brought about by specifying a minimum distance between samples (cf. fig.~\ref{fig:umap_pendula_pubescens}). Here we can also observe weak latitudinal differentiation for \pendula{}.
+
+    The two principal components of the intra-specific plots naturally account for much less of their total variance, being far more homogenous (cf. figs.~\ref{fig:pca_synonymous_pendula} \& \ref{fig:pca_synonymous_pubescens} where sites were restricted to be synonymous for better visibility). For each species we can roughly see two clusters. This is especially apparent for \pubescens{} where we observe a scarce region between the clusters and along the first principle component (cf. x-axis in fig.~\ref{fig:pca_synonymous_pubescens}). A smooth latitudinal gradient is also apparent along the same component indicating a northern and southern subpopulation. Restricting instead to bi-allelic or non-synonymous sites, the \acrshort{pca} and \acrshort{umap} plots look very similar for \pubescens{} (cf. figs.~\ref{fig:pca_pendula_pubescens_separate} - \ref{fig:umap_biallelic_pendula_pubescens_separate}). For \pendula{}, the second principal component varies latitudinally but much less smoothly so (cf. y-axis in fig.~\ref{fig:pca_synonymous_pendula}). Using the set of non-synonymous sites instead, we do not observe any latitudinal gradient along the two principal components (cf. fig.~\ref{fig:pca_nonsynonymous_pendula}). This could indicate that the observed population structure in \pendula{} is more due to past demography and not a result of local adaption . This could be in agreement with the postglacial recolonisation of several distinct populations.
 
     A subpopulation division seems appropriate, whose boundary was drawn along the 64th and 65th parallel for \pendula{} and \pubescens{}, respectively (cf. fig.~\ref{fig:locations}). Interestingly, this boundary roughly corresponds to a transition from humid continental climate in the south to subarctic climate in the north according to the Köppen classification system. A boundary at a similar latitude was also determined for Norway spruce (cf. section \ref{sec:expectations}) \cite{spruce-demography}. We also note that there is overall little population structure. Care has to be taken not to over-interpret the latitudinal gradient as the data itself mainly varies along that direction. Without prior knowledge or the scarce region separating the two clusters for \pubescens{}, we could merely be led to conclude that there is isolation by distance.
 
     \subsection{ADMIXTURE}
     \label{admixture}
 
-    To corroborate and refine the population clustering deduced from the \acrshort{pca} and \acrshort{umap} plots, the model-based clustering tool \mbox{ADMIXTURE} was used \cite{admixture}. As output we obtain the percental allocation to the specified clusters per individual with the number of clusters being specified by parameter $K$. The set of bi-allelic sites was filtered for sites in strong \acrshort{ld} using PLINK where we used a window and step size of 500 and 50 \acrshort{snp}s, respectively as well as an $r^2$ threshold of 0.2. To detect the rather weak population structure of \pendula{}, $r^2=0.99$ was used instead, for sufficiently many sites to remain. Fig.~\ref{fig:locations_admixture} shows the sample locations for two clusters ($K=2$) where each sample has been labeled according to its most similar cluster (cf. fig.~\ref{fig:pca_admixture} to see how these clusters correlate with the \acrshort{pca}). We observe a subpopulation structure very similar to that in the previous section (cf. figs. \ref{fig:pca_umap_pendula_pubescens} \& \ref{fig:pca_synonymous_pendula_pubescens_separate}). However, \mbox{ADMIXTURE}'s cross validation procedure favours only a single cluster for the intra-specific cases (cf. fig.~\ref{fig:admixture_cv_error_pendula_pubescens}).
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.306\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pendula/biallelic/locations.png}
-            \caption{\pendula{}}
-            \label{fig:locations_admixture_pendula}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pubescens/biallelic/locations.png}
-            \caption{\pubescens{}}
-            \label{fig:locations_admixture_pubescens}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pendula_pubescens/biallelic/locations.png}
-            \caption{both species}
-            \label{fig:locations_admixture_pendula_pubescens}
-        \end{subfigure}
-        \caption{Perturbed sample locations labeled with the \mbox{ADMIXTURE} clustering for $K=2$. The population structure closely resembles the one deduced from the \acrshort{pca} plots.}
-        \label{fig:locations_admixture}
-    \end{figure}
-
-    Considering the bar plots, it is apparent that there is admixture from \pendula{} into (mainly southern) \pubescens{} populations but not vice versa (cf. fig.~\ref{fig:admixture_barplot_pendula_pubescens_2}). This is entirely consistent with our expectations on diploid-tetraploid gene flow \cite{stebbins,birch-unidirectional-introgression}. The southern and northern subpopulations within each of the two species are furthermore visibly admixed although there is considerably more admixture near the contact zone for \pubescens{} (cf. figs. \ref{fig:admixture_barplot_pendula_2} \& \ref{fig:admixture_barplot_pubescens_2}). Admixture among \pendula{}'s subpopulations, on the other hand, is apparent much farther away from the contact zone, notably from the northern population far into the south (cf. fig.~\ref{fig:admixture_barplot_pendula_2}). This is likely due to \pendula{}'s very weak population structure. No sensible clustering was evident for larger values of $K$ (cf. figs. \ref{fig:admixture_barplot_pendula_pubescens_4}, \ref{fig:admixture_barplot_pendula_3} \& \ref{fig:admixture_barplot_pubescens_3}).
+    To corroborate and refine the population clustering deduced from the \acrshort{pca} and \acrshort{umap} plots, the model-based clustering tool \mbox{ADMIXTURE} was used \cite{admixture}. As output we obtain the percental allocation to the specified clusters per individual with the number of clusters being specified by parameter $K$. The set of bi-allelic sites was filtered for sites in strong \acrshort{ld} using PLINK where we used a window and step size of 500 and 50 \acrshort{snp}s, respectively as well as an $r^2$ threshold of 0.2. To detect the rather weak population structure of \pendula{}, $r^2=0.99$ was used instead, for sufficiently many sites to remain.
+    
+    The results indicate a subpopulation structure very similar to that in the previous section (cf. fig.~\ref{fig:pca_admixture}). However, \mbox{ADMIXTURE}'s cross validation procedure favours only a single cluster for the intra-specific cases (cf. fig.~\ref{fig:admixture_cv_error_pendula_pubescens}). Looking at the bar plot in fig.~\ref{fig:admixture_barplot_pendula_pubescens_2}, it is apparent that there is admixture from \pendula{} into (mainly southern) \pubescens{} populations but not vice versa. This is entirely consistent with our expectations on diploid-tetraploid gene flow \cite{stebbins,birch-unidirectional-introgression}. The southern and northern subpopulations within each of the two species are furthermore visibly admixed although there is considerably more admixture near the contact zone for \pubescens{} (cf. figs.~\ref{fig:admixture_barplot_pendula_2} \& \ref{fig:admixture_barplot_pubescens_2}). Admixture among \pendula{}'s subpopulations, on the other hand, is apparent much farther away from the contact zone, notably from the northern population far into the south (cf. fig.~\ref{fig:admixture_barplot_pendula_2}). This is likely due to \pendula{}'s very weak population structure. No sensible clustering was evident for larger values of $K$ (cf. figs.~\ref{fig:admixture_barplot_pendula_pubescens_4}, \ref{fig:admixture_barplot_pendula_3} \& \ref{fig:admixture_barplot_pubescens_3}).
 
     \begin{figure}[H]
         \centering
@@ -890,7 +838,7 @@
         \label{tbl:fst}
     \end{table}
 
-    Table~\ref{tbl:fst} shows the population differentiation given by the fixation index $F_{ST}$ which is a measure of subpopulation differentiation. The $F_{ST}$ can be defined for a single site by $\sigma^2_{p_i}/\sigma^2_p$ where $\sigma$ denotes the variance and $p$ and $p_i$ denote the frequency of a certain allele in the overall population and in the $i$th subpopulation, respectively. The denominator $\sigma^2_p = pq$ describes the variance of the site's allelic state in the overall population and the numerator $\sigma^2_{p_i} = \sum_j (p_j - p)^2 / n$ the variance across the $n$ different subpopulations (assuming they are of equal size)\cite{gillespie}. It is thus measuring how much of the total variance in allele frequencies is attributable to the variance across subpopulations. An $F_{ST}$ of $0$ indicates that there is no subpopulation differentiation of any kind while an $F_{ST}$ of $1$ would mean that all variance is due to subpopulation structure, i.e. there is no variance within subpopulations. \pubescens{} was treated as a diploid for the site-wise calculations as VCFtools cannot handle polyploidy \cite{vcftools}. The weighted $F_{ST}$ was inferred from the \acrshort{sfs} using \dadi{}, and thereby properly reflects the different ploidies \cite{dadi}. Both tools base their calculations on the method of Weir and Cockerham who advocate the weighted method \cite{weir-cockerham}. We observe rather little differentiation between the northern and southern subpopulations within each of the two species as expected. A more marked subpopulation differentiation for \pubescens{} as suggested by the \acrshort{pca} plots (cf. fig.~\ref{fig:pca_synonymous_pendula_pubescens_separate}) is not reflected in the values. Frequency distributions of the site-wise $F_{ST}$ for \pendula{} and \pubescens{} can be found in the appendix (cf. fig.~\ref{fig:fst}).
+    Table~\ref{tbl:fst} shows the population differentiation given by the fixation index $F_{ST}$ which is a measure of subpopulation differentiation. The $F_{ST}$ can be defined for a single site by $\sigma^2_{p_i}/\sigma^2_p$ where $\sigma$ denotes the variance and $p$ and $p_i$ denote the frequency of a certain allele in the overall population and in the $i$th subpopulation, respectively. The denominator $\sigma^2_p = pq$ describes the variance of the site's allelic state in the overall population and the numerator $\sigma^2_{p_i} = \sum_j (p_j - p)^2 / n$ the variance across the $n$ different subpopulations (assuming they are of equal size)\cite{gillespie}. It is thus measuring how much of the total variance in allele frequencies is attributable to the variance across subpopulations. An $F_{ST}$ of $0$ indicates that there is no subpopulation differentiation of any kind while an $F_{ST}$ of $1$ would mean that all variance is due to subpopulation structure, i.e. there is no variance within subpopulations. \pubescens{} was treated as a diploid for the site-wise calculations as VCFtools cannot handle polyploidy \cite{vcftools}. The weighted $F_{ST}$ was inferred from the \acrshort{sfs} using \dadi{}, and thereby properly reflects the different ploidies \cite{dadi}. Both tools base their calculations on the method of Weir and Cockerham who advocate the weighted method \cite{weir-cockerham}. We observe rather little differentiation between the northern and southern subpopulations within each of the two species as expected. A more marked subpopulation differentiation for \pubescens{} as suggested by the \acrshort{pca} plots (cf. fig.~\ref{fig:pca}) is not reflected in the values. Frequency distributions of the site-wise $F_{ST}$ for \pendula{} and \pubescens{} can be found in the appendix (cf. fig.~\ref{fig:fst}).
 
     \subsection{FEEMS}
     \label{sec:feems}
@@ -932,14 +880,7 @@
 
     \subsection{Methods}
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=\textwidth]{default/graphs/png/rulegraphs/schematics/dadi.png}
-        \caption{Schematic of the sample sets (left) and population scenarios (right) which were used for \dadi.}
-        \label{fig:schematic_scenarios_dadi}
-    \end{figure}
-
-    Fig.~\ref{fig:schematic_scenarios_dadi} shows a schematic of the sample sets and population scenarios that were used for \dadi. We consider both one and two-population scenarios, with variable and fixed time and discrete as well as continuous population size changes. In the one-population scenarios we mostly consider population size changes whereas we can include migration in the two-population scenarios. For the fixed-time scenarios, the time has been fixed to roughly coincide with the end of the \acrlong{lgm} (about 16\,000 BP). Variable-time models should provide better fits in most cases but fixing the time was nonetheless considered useful as it facilitated model comparison. That being said, the time since the \acrshort{lgm} has to be interpreted with caution as our parameters are scaled by mutation rate and effective population size for which no accurate estimates are available.
+    We consider both one and two-population scenarios, with variable and fixed time and discrete as well as continuous population size changes (cf. fig.~\ref{fig:schematic_scenarios_dadi} for a schematic of the sample sets and population scenarios that were used). In the one-population scenarios we mostly consider population size changes whereas we can include migration in the two-population scenarios. For the fixed-time scenarios, the time has been fixed to roughly coincide with the end of the \acrlong{lgm} (about 16\,000 BP). Variable-time models should provide better fits in most cases but fixing the time was nonetheless considered useful as it facilitated model comparison. That being said, the time since the \acrshort{lgm} has to be interpreted with caution as our parameters are scaled by mutation rate and effective population size for which no accurate estimates are available.
 
     A mutation rate of $\mu = 10^{-9}$ per site per generation and generation time of $t=20$ years was used \cite{jarkko}. The effective population size $N_e$ was determined to be $945\,883$, $2\,433\,981$ and $2\,235\,669$ for \pendula{} and \pubescens{} and both species together, respectively. Here we calculated $N_e$ based on the synonymous nucleotide diversity (i.e. $\pi_N = 4 N_e \mu \Leftrightarrow N_e = \pi_N/(4\mu)$). This is a rather rough estimate and was solely used for the fixed-time scenarios. \pubescens{}' effective population size is likely higher than \pendula{}'s owing to a larger number of haplotypes per individual and introgression from \pendula{} and \nana{}. However, the above formula for $\pi$ can be interpreted as $\mu$ multiplied by twice the expected coalescent time for two homologous sites. These coalescent times are likely higher between \pubescens{}' two sub-genomes which can lead to inflated estimates of $N_e$ when assuming otherwise.
 
@@ -982,50 +923,11 @@
         \label{tbl:1d_dadi}
     \end{table}
 
-    Table~\ref{tbl:1d_dadi} shows the maximum likelihood estimates of some one-population scenarios for \pendula{}. The standard deviation is reasonbly small indicating that a good local optimum could be found. The observed and modelled \acrshort{sfs} as well as the population size trajectory of the fixed-time scenarios in table~\ref{tbl:1d_dadi} are illustrated in figs. \ref{fig:constant_pop_size_since_ice_age_pendula} - \ref{fig:one_pop_size_change_since_ice_age_pendula}. The best fit was achieved by modelling a single population size change. Letting the time vary yielded similar time estimates whose likelihoods were not necessarily higher (cf. figs. \ref{fig:constant_pop_size_pendula} - \ref{fig:one_pop_size_change_pendula}). A comparison between fixed- and variable-time models by means of \acrshort{lrt}'s can be found in the appendix (cf. p-values in fig.~\ref{fig:nested_models_lgm_1d}). All tested scenarios for \pendula{} indicate population expansion in the not too distant past.
+    Table~\ref{tbl:1d_dadi} shows the maximum likelihood estimates of some one-population scenarios for \pendula{}. The standard deviation is reasonbly small indicating that a good local optimum could be found. The observed and modelled \acrshort{sfs} as well as the population size trajectory of the fixed-time scenarios in table~\ref{tbl:1d_dadi} are illustrated in figs.~\ref{fig:one_pop_size_change_since_ice_age_pendula} \& \ref{fig:constant_pop_size_since_ice_age_pendula} - \ref{fig:exp_pop_growth_since_ice_age_pendula}. The best fit was achieved by modelling a single population size change. Letting the time vary yielded similar time estimates whose likelihoods were not necessarily higher (cf. figs.~\ref{fig:constant_pop_size_pendula} - \ref{fig:one_pop_size_change_pendula}). A comparison between fixed- and variable-time models by means of \acrshort{lrt}'s can be found in the appendix (cf. p-values in fig.~\ref{fig:nested_models_lgm_1d}). All tested scenarios for \pendula{} indicate population expansion in the not too distant past.
 
     Exponential population growth is the most natural growth model for unconstrained populations as it assumes that the future population size is a constant multiple of the current size. However, this type of growth can hardly be maintained over long periods of time for positive growth (e.g. since the end of the \acrshort{lgm}) as there are limited amounts of resources and is thus not so realistic. Modelling two population size changes did not provide a significantly better fit than modelling only one change and yielded a slightly lower likelihood in some cases. This happened even though the two models are nested and is likely due to a larger parameter space (2 more parameters) of the more complex model resulting in worse optimisation. Moreover, jointly modelling 1D scenarios for both birch species produced less stable albeit similar estimates.
 
-    The graphs for \pubescens{} show somewhat different dynamics. The fixed-time models partly yielded very low likelihoods compared to the variable-time cases (cf. figs. \ref{fig:constant_pop_size_since_ice_age_pubescens} \& \ref{fig:lin_pop_growth_since_ice_age_pubescens}). \pubescens{}' large $N_e$ estimate caused the estimated fixed time after the \acrshort{lgm} to be rather short. To fit the model properly thus required a lot of mutations whence an unreasonably large relative effective population size $\nu$ was necessary so that the upper bound was reached ($\nu_{up}$ = 1000). Such sizes seem rather large, even for drastic population changes, and suggest that \pubescens{}' high polymorphism cannot be modelled sensibly in such a short amount of time. The fixed-time scenarios nevertheless indicate population expansion in all cases. \pubescens{}' variable-time time models, in contrast, unanimously indicate population decline as well as providing a better fit. In light of \pubescens{}' naive $N_e$ estimate, these scenarios span several glaciations, however, so that this result is not necessarily contradictory. It also has to be noted that the signature left behind by the polyploid ancestry of \pubescens{} is more complex which can complicate inference.
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.465\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/constant_pop_size_since_ice_age/pendula/synonymous/sfs.png}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.525\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/constant_pop_size_since_ice_age/pendula/synonymous/trajectory.png}
-        \end{subfigure}
-        \caption{Constant population size scenario after the \acrshort{lgm} for \pendula{}. We can see the observed and the modelled SFS (left) as well as the population size trajectory (right). $\Sigma |r_i|/n$ denotes the average Anscombe residual and $log(L)$ the log-likelihood \cite{dadi-docs}.}
-        \label{fig:constant_pop_size_since_ice_age_pendula}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.465\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/lin_pop_growth_since_ice_age/pendula/synonymous/sfs.png}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.525\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/lin_pop_growth_since_ice_age/pendula/synonymous/trajectory.png}
-        \end{subfigure}
-        \caption{Linear population growth after the \acrshort{lgm} for \pendula{}. This model naturally performs better than the constant-size model but does not provide a very good fit overall.}
-        \label{fig:lin_pop_growth_since_ice_age_pendula}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.465\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/exp_pop_growth_since_ice_age/pendula/synonymous/sfs.png}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.525\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/exp_pop_growth_since_ice_age/pendula/synonymous/trajectory.png}
-        \end{subfigure}
-        \caption{Exponential population growth after the \acrshort{lgm} for \pendula{}. Exponential growth is unlikely to be sustainable over long periods of time. This model performs worse than a single discrete population size change (cf. fig.~\ref{fig:one_pop_size_change_since_ice_age_pendula}).}
-        \label{fig:exp_pop_growth_since_ice_age_pendula}
-    \end{figure}
+    The graphs for \pubescens{} show somewhat different dynamics. The fixed-time models partly yielded very low likelihoods compared to the variable-time cases (cf. figs.~\ref{fig:constant_pop_size_since_ice_age_pubescens} \& \ref{fig:lin_pop_growth_since_ice_age_pubescens}). \pubescens{}' large $N_e$ estimate caused the estimated fixed time after the \acrshort{lgm} to be rather short. To fit the model properly thus required a lot of mutations whence an unreasonably large relative effective population size $\nu$ was necessary so that the upper bound was reached ($\nu_{up}$ = 1000). Such sizes seem rather large, even for drastic population changes, and suggest that \pubescens{}' high polymorphism cannot be modelled sensibly in such a short amount of time. The fixed-time scenarios nevertheless indicate population expansion in all cases. \pubescens{}' variable-time time models, in contrast, unanimously indicate population decline as well as providing a better fit. In light of \pubescens{}' naive $N_e$ estimate, these scenarios span several glaciations, however, so that this result is not necessarily contradictory. It also has to be noted that the signature left behind by the polyploid ancestry of \pubescens{} is more complex which can complicate inference.
 
     \begin{figure}[H]
         \centering
@@ -1040,26 +942,9 @@
         \label{fig:one_pop_size_change_since_ice_age_pendula}
     \end{figure}
 
-    The one-population models presented here are rather simple but there is not much more that can be included in the absence of selection. None of the models manages to completely capture the excess of high-frequency derived alleles we observe for \pendula{} (cf. figs. \ref{fig:constant_pop_size_since_ice_age_pendula} - \ref{fig:exp_pop_growth_since_ice_age_pendula}). This excess could be due to a more fine-scale population structure, ancestral misidentification errors, selection acting directly on synonymous sites or multiple-merger coalescents where some individuals produce disproportionally many offspring. We nevertheless obtain lower average residuals than for \pubescens{} for which we have a deficit of high-frequency derived alleles (cf. figs. \ref{fig:constant_pop_size_since_ice_age_pubescens} - \ref{fig:one_pop_size_change_pubescens}). In summary, the results indicate population expansion in the not too distant past which is in line with postglacial recolonisation (given that we approximated the time after the \acrshort{lgm} reasonably well). The models were also tested for different fixed time values which suggested similar results. \pubescens{}' estimates may very well be confounded by the signatures of its polyploid ancestors but the results also indicate recent population expansion.
+    The one-population models presented here are rather simple but there is not much more that can be included in the absence of selection. None of the models manages to completely capture the excess of high-frequency derived alleles we observe for \pendula{} (cf. figs.~\ref{fig:one_pop_size_change_since_ice_age_pendula} \& \ref{fig:constant_pop_size_since_ice_age_pendula} - \ref{fig:one_pop_size_change_pendula}). This excess could be due to a more fine-scale population structure, ancestral misidentification errors, selection acting directly on synonymous sites or multiple-merger coalescents where some individuals produce disproportionally many offspring. We nevertheless obtain lower average residuals than for \pubescens{} for which we have a deficit of high-frequency derived alleles (cf. figs.~\ref{fig:constant_pop_size_since_ice_age_pubescens} - \ref{fig:one_pop_size_change_pubescens}). In summary, the results indicate population expansion in the not too distant past which is in line with postglacial recolonisation (given that we approximated the time after the \acrshort{lgm} reasonably well). The models were also tested for different fixed time values which suggested similar results. \pubescens{}' estimates may very well be confounded by the signatures of its polyploid ancestors but the results also indicate recent population expansion.
 
-    To confirm our hypothesis about population expansion, Tajima's $D$ was calculated whose values were determined to be $-0.95$, $-1.49$ and $-1.73$ for \pendula{}, \pubescens{} and both species together, respectively. VCFtools was used for the calculations, specifying a window size of 1000 bps from which a weighted average was calculated (cf. fig.~\ref{fig:tajimas_d} for frequency distributions). Inferring Tajima's $D$ from the \acrshort{sfs} using \dadi{} provided values of $-1.36$, $-1.79$ and $-1.92$ which are consistently lower and should be less biased as \pubescens{}'s proper ploidy could be used. Negative values of Tajima's $D$ are common in practice, but could, in principle, be indicative of population expansion. They are, however, well within the margins of the basic coalescent's expectations \cite{hein,gillespie}.
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.49\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration_one_pop_size_change/pendula_pubescens/synonymous/data.png}
-            \caption{observed}
-            \label{fig:constant_pop_size_since_ice_age}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.49\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration_one_pop_size_change/pendula_pubescens/synonymous/model.png}
-            \caption{modelled}
-            \label{fig:one_pop_size_change_since_ice_age}
-        \end{subfigure}
-        \caption{Observed and modelled \acrshort{sfs} for asymmetric migration between the two species together with population growth modelled by a single population size change. This is the model with the highest likelihood and lowest average residual among all 2D scenarios.}
-        \label{fig:dadi_sfs_best_fixed_time_model}
-    \end{figure}
+    To confirm our hypothesis about population expansion, Tajima's $D$ was calculated whose values were determined to be -0.95, -1.49 and -1.73 for \pendula{}, \pubescens{} and both species together, respectively. VCFtools was used for the calculations, specifying a window size of 1000 bps from which a weighted average was calculated (cf. fig.~\ref{fig:tajimas_d} for frequency distributions). Inferring Tajima's $D$ from the \acrshort{sfs} using \dadi{} provided values of -1.36, -1.79 and -1.92 which are consistently lower and should be less biased as \pubescens{}'s proper ploidy could be used. Negative values of Tajima's $D$ are common in practice, but could, in principle, be indicative of population expansion. They are, however, well within the margins of the basic coalescent's expectations \cite{hein,gillespie}.
 
     \subsection{Two-Population Scenarios}
 
@@ -1084,37 +969,7 @@
         \label{tbl:2d_dadi}
     \end{table}
 
-    Migration from \pendula{} into \pubescens{} is consistently estimated to be higher than vice versa which agrees with the expectations about polyploid introgression (cf. section \ref{sec:species}). Figs. \ref{fig:dadi_2d_residuals_constant_size_variable_time} - \ref{fig:dadi_2d_residuals_growth_variable_time} visualise the residuals for some of the models. The most complex model--asymmetric migration with population growth--provides the highest likelihood (cf. fig.~\ref{fig:dadi_sfs_best_fixed_time_model}). P-value comparisons for the nested models in table~\ref{tbl:2d_dadi} as well as for fixed vs variable-time models can be found in the appendix (cf. fig.~\ref{fig:nested_models_2d}). Similar to the one-population case for \pubescens{}, we obtain significantly lower likelihoods when trying to fix the time to the end of the \acrshort{lgm} (cf. figs. \ref{fig:dadi_2d_residuals_no_migration_fixed_time} - \ref{fig:dadi_2d_residuals_growth_fixed_time} and p-values in fig.~\ref{fig:nested_models_2d_lgm}). This is again due the very short time span integrated over.
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.49\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_no_migration/pendula_pubescens/synonymous/residuals.png}
-            \caption{no migration + constant size}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.495\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_no_migration_one_pop_size_change/pendula_pubescens/synonymous/residuals.png}
-            \caption{no migration + 1-size change}
-        \end{subfigure}
-        \caption{Anscombe residuals for 2D scenarios without migration over variable time.}
-        \label{fig:dadi_2d_residuals_constant_size_variable_time}
-    \end{figure}
-
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.49\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_symmetric_migration/pendula_pubescens/synonymous/residuals.png}
-            \caption{symmetric migration}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.5\textwidth}
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration/pendula_pubescens/synonymous/residuals.png}
-            \caption{asymmetric migration}
-        \end{subfigure}
-        \caption{Anscombe residuals for 2D scenarios with (a)-symmetric migration and a constant population size over variable time.}
-        \label{fig:dadi_2d_residuals_variable_time}
-    \end{figure}
+    Migration from \pendula{} into \pubescens{} is consistently estimated to be higher than vice versa which agrees with the expectations about polyploid introgression (cf. section \ref{sec:species}). Figs.~\ref{fig:dadi_2d_residuals_growth_variable_time}, \ref{fig:dadi_2d_residuals_constant_size_variable_time} \& \ref{fig:dadi_2d_residuals_variable_time_migration_constant_size} visualise the residuals for some of the models. The most complex model--asymmetric migration with population growth--provides the highest likelihood (cf. fig.~\ref{fig:dadi_sfs_best_fixed_time_model}). P-value comparisons for the nested models in table~\ref{tbl:2d_dadi} as well as for fixed vs variable-time models can be found in the appendix (cf. fig.~\ref{fig:nested_models_2d}). Similar to the one-population case for \pubescens{}, we obtain significantly lower likelihoods when trying to fix the time to the end of the \acrshort{lgm} (cf. figs.~\ref{fig:dadi_2d_residuals_no_migration_fixed_time} - \ref{fig:dadi_2d_residuals_growth_fixed_time} and p-values in fig.~\ref{fig:nested_models_2d_lgm}). This is again due the very short time span integrated over.
 
     \begin{figure}[H]
         \centering
@@ -1127,7 +982,7 @@
             \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration_one_pop_size_change/pendula_pubescens/synonymous/residuals.png}
             \caption{asym. migration + 1-size change\label{fig:dadi_2d_residuals_asymmetric_growth_variable_time}}
         \end{subfigure}
-        \caption{Anscombe residuals for 2D scenarios with (a)-symmetric migration and population growth over variable time. These scenarios are the most complex ones and achieve significantly higher likelihoods. The observed and modelled \acrshort{sfs} of fig.~\ref{fig:dadi_2d_residuals_asymmetric_growth_variable_time} are shown in fig.~\ref{fig:dadi_sfs_best_fixed_time_model}.}
+        \caption{Anscombe residuals for 2D scenarios with \mbox{(a)-symmetric} migration and population growth over variable time. These scenarios are the most complex ones and achieve higher likelihoods than all other models. The observed and modelled \acrshort{sfs} of (\subref{fig:dadi_2d_residuals_asymmetric_growth_variable_time}) are shown in fig.~\ref{fig:dadi_sfs_best_fixed_time_model}.}
         \label{fig:dadi_2d_residuals_growth_variable_time}
     \end{figure}
 
@@ -1147,66 +1002,26 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.9\textwidth]{tetraploid/graphs/png/polydfe/pendula/dfe_type_bs_bca.C.png}
-        \caption{Different types of \acrshort{dfe} for \pendula{}. Correcting for ancestral misidentification does not change the distribution considerably.}
-        \label{fig:dfe_type_C_pendula}
-    \end{figure}
-
-    We used polyDFE for the inference \cite{polydfe}. As input, an unfolded \acrshort{sfs} for both synonymous and non-synonymous sites is required. The synonymous sites are assumed to be neutrally-evolving, in addition to assuming that demography affects synonymous and non-synonymous sites in the same manner. The difference in the non-synonymous \acrshort{sfs} compared to the synonymous one is thus caused by selection so that we can infer the strength of selection by controlling for all other factors, i.e. demography. A similar principle is put to use in the well-known McDonald-Kreitman test where the ratio of non-synonymous to synonymous polymorphism within a species is compared to the ratio of non-synonymous to synonymous substitutions across species \cite{mk-test}. In polyDFE, however, passing divergence data is optional and was avoided in this analysis. Besides that, we are required to specify the total number of surveyed sites. \acrfull{mle} is again used to find the best fitting parameters with the expected allele frequencies being inferred from Poisson Random Field theory which is diffusion-based. This is similar to how \dadi{} works. Poisson likelihoods are used again, but this time for each site independently (assuming that we do not choose to model variable mutation rates). This is opposed to independent Poisson likelihoods per frequency class in \dadi{}. Nuisance parameters are used to correct for demography, and ancestral misidentification can optionally be included by introducing a single parameter modelling the probability of any site being assigned the wrong ancestral state (cf. fig.~\ref{fig:dfe_type_C_pendula}).
-
-    The \acrshort{dfe}'s default shape is assumed to follow a reflected gamma distribution for non-positive selection coefficients and an exponential distribution for positive ones. This model is used for all displayed \acrshort{dfe}s if not otherwise specified and is polyDFE's default model. Different models and a brief comparison between them can be found in the appendix (cf. figs. \ref{fig:dfe_type_C} - \ref{fig:dfe_type_A}). The exponential shape for positive selection coefficients, i.e. a much higher probability of slightly advantageous mutations compared to strongly advantageous ones, seems plausible when considering \acrfull{fgm}. That is, if we assume the fitness of an organism to be close to a local maximum as well as being determined by many interdependent parameters (e.g. \acrshort{snp}s), then a large fitness increase by changing only one of the parameter seems unlikely. The distribution for negative selection coefficients is more complex, possibly being multimodal (i.e. having several maxima). This could result from there being several component distributions that overlap \cite{dfe-review}. A gamma distribution, being more flexible and able to assume both the shape of an exponential distribution and a skewed normal-like distribution, is thus more appropriate. In polyDFE, we can also distinguish between estimating only a deleterious \acrshort{dfe}, i.e. only considering negative selection coefficients, and a full \acrshort{dfe} where we also consider beneficial mutations (cf. fig.~\ref{fig:dfe_type_C_pendula}). These models are nested and are thus eligible for model comparison through \acrlong{lrt}s (cf. fig.~\ref{fig:probs_nested}).
-
-    Confidence intervals were determined using 100 \acrfull{bca} bootstraps where the bootstrap samples' allele frequencies were drawn from a Poisson distribution (cf. fig.~\ref{fig:dfe_parameter_dict} for a comparison with percentile bootstraps). The \acrshort{bfgs} algorithm was used which performs local optimisation and is polyDFE's default algorithm. The species' proper ploidies are also reflected properly, the input being \acrshort{sfs}-based.
-
-    \subsection{Results}
-
-    \begin{figure}[ht]
-        \centering
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pendula_pubescens/dfe_probs_nested.C.png}
-            \caption{both species}
-            \label{fig:probs_nested_pendula_pubescens}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pendula/dfe_probs_nested.C.png}
-            \caption{\pendula{}}
-            \label{fig:probs_nested_pendula}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.32\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pubescens/dfe_probs_nested.C.png}
-            \caption{\pubescens{}}
-            \label{fig:probs_nested_pubescens}
-        \end{subfigure}
-        \caption{Visualisation of p-values of \acrshort{lrt}s for various \acrshort{dfe} models. The null hypothesis assumes that the more complex model (positioned on the vertical axis) does not provide a better fit to the data. The axis labels \textit{full anc} and \textit{del} denote the \textit{full \acrshort{dfe} + ancestral misidentification} and \textit{deleterious \acrshort{dfe}}, respectively.}
-        \label{fig:probs_nested}
-    \end{figure}
-
-    Fig.~\ref{fig:dfe_type_C_pendula} displays \pendula{}'s \acrshort{dfe} for various nested models. Including ancestral misidentification does not seem to affect the distribution significantly which is reflected in the rather large non-significant p-values in fig.~\ref{fig:probs_nested_pendula_pubescens}. Including advantageous mutations, however, does provide a much better fit which is again apparent in the minute p-values, allowing us to reject the null hypothesis. The significantly larger variance of the effect size and proportion of beneficial mutations visible in fig.~\ref{fig:dfe_type_C_pendula} can be explained by the scarcity of such mutations, having a much smaller impact on the \acrshort{sfs} in comparison to deleterious mutations \cite{dfe-plants}. Strongly advantageous mutations moreover quickly reach fixation, further reducing the number of possible observations \cite{polydfe}.
-
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=0.9\textwidth]{tetraploid/graphs/png/polydfe/dfe_subpopulations_bs_bca.C.full_anc.png}
-        \caption{The full \acrshort{dfe} for the four different subpopulations. The vertical bars indicate 95\% confidence intervals. There seem to be more slightly advantageous mutations for \pubescens{}.}
-        \label{fig:dfe_subpopulations}
-    \end{figure}
-
-    A comparison of the \acrshort{dfe} for the two southern and northern subpopulations is shown in fig.~\ref{fig:dfe_subpopulations}. There seem to be rather large differences in the number of beneficial mutation between the two species. \pubescens{} is estimated to have many more slightly advantageous mutations but all confidence intervals, in fact, overlap. This is in contrast with the deleterious \acrshort{dfe}s which have very narrow confidence intervals and are strikingly similar among all subpopulations (cf. fig.~\ref{fig:dfe_subpopulations_deleterious}). For all analyses, the optimisation runs completed with a gradient reasonably small and larger gradients do not seem to introduce a bias to the estimated parameters in general (cf. fig.~\ref{fig:dfe_grad_errors}). Furthermore, the \acrshort{dfe} seems to be rather robust to the bias introduced by calling \pubescens{} as diploid (cf. fig.~\ref{fig:dfe_subpopulation_calling_methods}).
-
-    \begin{figure}[ht]
-        \centering
         \includegraphics[width=0.9\textwidth]{tetraploid/graphs/png/polydfe/dfe_subpopulations_bs_bca.C.deleterious_anc.png}
         \caption{The deleterious \acrshort{dfe} for the four different subpopulations. The shape is remarkably similar between the two species.}
         \label{fig:dfe_subpopulations_deleterious}
     \end{figure}
 
+    We used polyDFE for the inference \cite{polydfe}. As input, an unfolded \acrshort{sfs} for both synonymous and non-synonymous sites is required. The synonymous sites are assumed to be neutrally-evolving, in addition to assuming that demography affects synonymous and non-synonymous sites in the same manner. The difference in the non-synonymous \acrshort{sfs} compared to the synonymous one is thus caused by selection so that we can infer the strength of selection by controlling for all other factors, i.e. demography. A similar principle is put to use in the well-known McDonald-Kreitman test where the ratio of non-synonymous to synonymous polymorphism within a species is compared to the ratio of non-synonymous to synonymous substitutions across species \cite{mk-test}. In polyDFE, however, passing divergence data is optional and was avoided in this analysis. Besides that, we are required to specify the total number of surveyed sites. \acrfull{mle} is again used to find the best fitting parameters with the expected allele frequencies being inferred from Poisson Random Field theory which is diffusion-based. This is similar to how \dadi{} works. Poisson likelihoods are used again, but this time for each site independently (assuming that we do not choose to model variable mutation rates). This is opposed to independent Poisson likelihoods per frequency class in \dadi{}. Nuisance parameters are used to correct for demography, and ancestral misidentification can optionally be included by introducing a single parameter modelling the probability of any site being assigned the wrong ancestral state (cf. fig.~\ref{fig:dfe_type_C_pendula}).
+
+    The \acrshort{dfe}'s default shape is assumed to follow a reflected gamma distribution for non-positive selection coefficients and an exponential distribution for positive ones. This model is used for all displayed \acrshort{dfe}s if not otherwise specified and is polyDFE's default model. Different models and a brief comparison between them can be found in the appendix (cf. figs.~\ref{fig:dfe_type_C} - \ref{fig:dfe_type_A}). The exponential shape for positive selection coefficients, i.e. a much higher probability of slightly advantageous mutations compared to strongly advantageous ones, seems plausible when considering \acrfull{fgm}. That is, if we assume the fitness of an organism to be close to a local maximum as well as being determined by many interdependent parameters (e.g. \acrshort{snp}s), then a large fitness increase by changing only one of the parameter seems unlikely. The distribution for negative selection coefficients is more complex, possibly being multimodal (i.e. having several maxima). This could result from there being several component distributions that overlap \cite{dfe-review}. A gamma distribution, being more flexible and able to assume both the shape of an exponential distribution and a skewed normal-like distribution, is thus more appropriate. In polyDFE, we can also distinguish between estimating only a deleterious \acrshort{dfe}, i.e. only considering negative selection coefficients, and a full \acrshort{dfe} where we also consider beneficial mutations (cf. fig.~\ref{fig:dfe_type_C_pendula}). These models are nested and are thus eligible for model comparison through \acrlong{lrt}s (cf. fig.~\ref{fig:probs_nested}).
+
+    Confidence intervals were determined using 100 \acrfull{bca} bootstraps where the bootstrap samples' allele frequencies were drawn from a Poisson distribution (cf. fig.~\ref{fig:dfe_parameter_dict} for a comparison with percentile bootstraps). The \acrshort{bfgs} algorithm was used which performs local optimisation and is polyDFE's default algorithm. The species' proper ploidies are also reflected properly, the input being \acrshort{sfs}-based.
+
+    \subsection{Results}
+
+    Including ancestral misidentification does not seem to affect the distribution significantly (fig.~\ref{fig:probs_nested_pendula_pubescens} for a p-value comparison for various models). Including advantageous mutations, however, does provide a much better fit which is again apparent in the minute p-values, allowing us to reject the null hypothesis. The significantly larger variance of the effect size and proportion of beneficial mutations visible in fig.~\ref{fig:dfe_type_C_pendula} can be explained by the scarcity of such mutations, having a much smaller impact on the \acrshort{sfs} in comparison to deleterious mutations \cite{dfe-plants}. Strongly advantageous mutations moreover quickly reach fixation, further reducing the number of possible observations \cite{polydfe}.
+
+    A comparison of the \acrshort{dfe} for the two southern and northern subpopulations is shown in figs.~\ref{fig:dfe_subpopulations_deleterious}. There seem to be rather large differences in the number of beneficial mutation between the two species (cf. fig.~\ref{fig:dfe_subpopulations}). \pubescens{} is estimated to have many more slightly advantageous mutations but all confidence intervals, in fact, overlap. This is in contrast with the deleterious \acrshort{dfe}s which have very narrow confidence intervals and are strikingly similar among all subpopulations (cf. fig.~\ref{fig:dfe_subpopulations_deleterious}). For all analyses, the optimisation runs completed with a gradient reasonably small and larger gradients do not seem to introduce a bias to the estimated parameters in general (cf. fig.~\ref{fig:dfe_grad_errors}). Furthermore, the \acrshort{dfe} seems to be rather robust to the bias introduced by calling \pubescens{} as diploid (cf. fig.~\ref{fig:dfe_subpopulation_calling_methods}).
+
     \subsection{Discussion}
 
-    The shape of the \acrshort{dfe} is strikingly similar between the two species (cf. fig.~\ref{fig:dfe_subpopulations_deleterious}). This is perhaps not that surprising when considering the species' related ancestry, in particular, if a species similar to \pendula{} was the autopolyploid ancestor of \pubescens{} (cf. section \ref{sec:expectations}). In a recent paper, the shape of the deleterious \acrshort{dfe} has been found to be very similar across several great ape species \cite{dfe-similarity-across-species}. This similarity between closely related species could be confirmed for the two birch species. Shared ancestry thus seems to be an important determinant in the similarity of the \acrshort{dfe}, the bulk of allele frequencies taking a long time to change after speciation, after all. It can also be argued, however, that closely related species have a rather similar genomic architecture and hence the \acrshort{dfe} is unlikely to change considerably between them. That being said, different species could be subject to environmental pressures of a very different nature and intensity after speciation, which could change the \acrshort{dfe} significanly.
+    The strong similarity of the \acrshort{dfe} between the two species is perhaps not that surprising when considering the species' related ancestry. This is especially so, if a species similar to \pendula{} was the autopolyploid ancestor of \pubescens{} (cf. section \ref{sec:expectations}). In a recent paper, the shape of the deleterious \acrshort{dfe} has been found to be very similar across several great ape species  which could be confirmed for the birch species in this work \cite{dfe-similarity-across-species}. Shared ancestry thus seems to be an important determinant in the similarity of the \acrshort{dfe}, the bulk of allele frequencies taking a long time to change after speciation, after all. It can also be argued, however, that closely related species have a rather similar genomic architecture and hence the \acrshort{dfe} is unlikely to change considerably between them. That being said, different species could be subject to environmental pressures of a very different nature and intensity after speciation, which could potentially change the \acrshort{dfe} significantly.
 
     The full \acrshort{dfe} differs substantially in the amount of beneficial mutations among the two species although the variance in the amount of such mutations is rather high. The amount of beneficial mutations inferred from the \acrshort{sfs} is very sensitive to ancestral misidentification as such mutations are rare and expected to segregate at high frequencies \cite{polydfe}. polyDFE's ancestral misidentification parameter can properly correct for that error provided that the probability of misidentification is the same over all frequency classes which might not be the case, especially when using more elaborate methods for inferring the ancestral states. In the great apes paper, \acrlong{lrt}s did not favour a \acrshort{dfe} including beneficial mutations which, in our case, is true for \pendula{} but not for \pubescens{} (cf. fig.~\ref{fig:probs_nested}). Moreover, the fraction of selectively neutral ($|4N_es| < 1$) or more strongly advantageous ($4N_es \geq 1$) mutations is consistently estimated to be larger in \pubescens{} (compared to \pendula{}) which is in line with a higher value of $\pi_N/\pi_S$ (cf. section \ref{sec:pi}). In all cases, the fraction of such mutations is nevertheless lower than suggested by $\pi_N/\pi_S$ which could be due to the fixation of more strongly deleterious mutations ($4N_es \leq 1$).
 
@@ -1220,17 +1035,33 @@
     To summarise, this work confirms the existence of a northern and a southern cluster in each species, unidirectional introgression from \pendula{} into \pubescens{}, and population expansion after the \acrshort{lgm}. The \acrshort{dfe} of new mutations between the two species is also remarkably similar and the amount of deleterious mutations seems acceptable. There is thus hope that these species will be able to adapt to future environmental challenges and that \pendula{} continues being a good and sustainable resource for timber. Much remains to be done to unravel the complex interplay and history of these rather flexible species whose prosperity is crucial to a functioning boreal ecosystem.
 
     \clearpage
+    
+    \begin{acknowledgements}
+        I would like to express my thanks to my supervisor Martin Lascoux for helpful feedback, reading material, personal lectures and a conducive working atmosphere. I would also like to thank my co-supervisor Jennifer James for advising me on potential tools, helping create the project outline and kindly listening to my progress reports. At last, I also owe thanks to Luis Leal for a detailed introduction to the underlying data and useful recommendations.
+    \end{acknowledgements}
+
+    \clearpage
 
     \bibliography{refs}
 
     \clearpage
 
+	\appendix
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{A\arabic{figure}}
 
     \section{Appendix}
     \label{sec:appendix}
 
     \subsection{Pipeline}
     \label{sec:appendix-pipeline}
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=\textwidth]{default/graphs/png/rulegraphs/schematics/subworkflows.png}
+        \caption{A schematic of the pipeline's subworkflows. Each subworkflow can be executed independently. The \acrshort{vcf} filtering relies on the previous annotation of the \acrshort{vcf} files as well as the derived sample sets (i.e. which individuals to include). The lowermost subworkflows only require a \acrshort{vcf} file and possibly some sample metadata and subpopulation information.}
+        \label{fig:subworkflows}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1284,6 +1115,25 @@
     \end{figure}
 
     \subsubsection{Heterozygosity}
+    
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.485\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{default/graphs/png/heterozygosity/pendula/all/het.log.png}
+            \caption{\pendula{}}
+            \label{fig:het_pendula}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.485\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{default/graphs/png/heterozygosity/pubescens/all/het.log.png}
+            \caption{\pubescens{}}
+            \label{fig:het_pubescens}
+        \end{subfigure}
+        \caption{Expected (under \acrshort{hwe}) and observed site-wise heterozygosity over the set of bi- and mono-allelic sites. The observed excess heterozygosity for \pubescens{} is caused by calling it as diploid. The expected site-wise heterozygosity is equivalent to the nucleotide diversity $\pi$. The dashed vertical lines indicate the average heterozygosities. Note that these plots are log-scaled.}
+        \label{fig:het}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1447,8 +1297,6 @@
 
     \subsection{ADMIXTURE}
 
-    All bar plots are first sorted by the displayed (\mbox{ADMIXTURE}) subpopulations and second by latitude in ascending order.
-
     \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.313\textwidth}
@@ -1474,6 +1322,32 @@
         \caption{5-fold cross validation error over the number of clusters $K$. A single population ($K=1$) is erroneously favoured within each of the two species. The set of bi-allelic sites was used for all analyses.}
         \label{fig:admixture_cv_error_pendula_pubescens}
     \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.306\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pendula/biallelic/locations.png}
+            \caption{\pendula{}}
+            \label{fig:locations_admixture_pendula}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pubescens/biallelic/locations.png}
+            \caption{\pubescens{}}
+            \label{fig:locations_admixture_pubescens}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{default/graphs/png/admixture/pendula_pubescens/biallelic/locations.png}
+            \caption{both species}
+            \label{fig:locations_admixture_pendula_pubescens}
+        \end{subfigure}
+        \caption{Jittered sample locations labeled with the \mbox{ADMIXTURE} clustering for $K=2$. The population structure closely resembles the one deduced from the \acrshort{pca} plots.}
+        \label{fig:locations_admixture}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1497,11 +1371,13 @@
             \caption{both species}
             \label{fig:pca_admixture_pendula_pubescens}
         \end{subfigure}
-        \caption{\acrshort{pca} scatterplots labeled with the \mbox{ADMIXTURE} clustering for $K=2$. A clustering very similar to the latitudinal gradients in figs. \ref{fig:pca_umap_pendula_pubescens} \& \ref{fig:pca_synonymous_pendula_pubescens_separate} is apparent.}
+        \caption{\acrshort{pca} scatterplots labeled with the \mbox{ADMIXTURE} clustering for $K=2$. A clustering very similar to the latitudinal gradients in figs.~\ref{fig:pca} \& \ref{fig:pca} is apparent.}
         \label{fig:pca_admixture}
     \end{figure}
 
     \subsubsection{\pendula{} \& \pubescens{}}
+    
+    All bar plots are first sorted by the displayed (\mbox{ADMIXTURE}) subpopulations and second by latitude in ascending order.
 
     \begin{figure}[H]
         \centering
@@ -1654,6 +1530,25 @@
     \subsection{SFS}
     \label{sec:appendix-sfs}
 
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.52\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/est-sfs.50.unfolded.linear.png}
+            \caption{linear}
+            \label{fig:est_sfs_linear}
+        \end{subfigure}
+        \hspace{-2em}
+        \begin{subfigure}[b]{0.52\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/sfs/est-sfs.50.unfolded.log.png}
+            \caption{log-scaled}
+            \label{fig:est_sfs_log}
+        \end{subfigure}
+        \caption{Linear and log-scaled site-frequency spectrum inferred with EST-SFS by using 50 ingroup and two outgroup samples. The spectrum is relatively smooth which was not the case for smaller sets of \acrshort{snp}s or a larger number of ingroup samples.}
+        \label{fig:est_sfs}
+    \end{figure}
+
     \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.52\textwidth}
@@ -1675,6 +1570,13 @@
 
     \subsection{\dadi{}}
     \label{sec:dadi-appendix}
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=\textwidth]{default/graphs/png/rulegraphs/schematics/dadi.png}
+        \caption{Schematic of the sample sets (left) and population scenarios (right) which were used for \dadi.}
+        \label{fig:schematic_scenarios_dadi}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1746,6 +1648,45 @@
     \end{figure}
 
     \subsubsection{\pendula{}}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.465\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/constant_pop_size_since_ice_age/pendula/synonymous/sfs.png}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.525\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/constant_pop_size_since_ice_age/pendula/synonymous/trajectory.png}
+        \end{subfigure}
+        \caption{Constant population size scenario after the \acrshort{lgm} for \pendula{}. We can see the observed and the modelled SFS (left) as well as the population size trajectory (right). $\Sigma |r_i|/n$ denotes the average Anscombe residual and $log(L)$ the log-likelihood \cite{dadi-docs}.}
+        \label{fig:constant_pop_size_since_ice_age_pendula}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.465\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/lin_pop_growth_since_ice_age/pendula/synonymous/sfs.png}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.525\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/lin_pop_growth_since_ice_age/pendula/synonymous/trajectory.png}
+        \end{subfigure}
+        \caption{Linear population growth after the \acrshort{lgm} for \pendula{}. This model naturally performs better than the constant-size model but does not provide a very good fit overall.}
+        \label{fig:lin_pop_growth_since_ice_age_pendula}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.465\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/exp_pop_growth_since_ice_age/pendula/synonymous/sfs.png}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.525\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/exp_pop_growth_since_ice_age/pendula/synonymous/trajectory.png}
+        \end{subfigure}
+        \caption{Exponential population growth after the \acrshort{lgm} for \pendula{}. Exponential growth is unlikely to be sustainable over long periods of time. This model performs worse than a single discrete population size change (cf. fig.~\ref{fig:one_pop_size_change_since_ice_age_pendula}).}
+        \label{fig:exp_pop_growth_since_ice_age_pendula}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1906,6 +1847,53 @@
     \end{figure}
 
     \subsubsection{\pendula{} \& \pubescens{}}
+    
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration_one_pop_size_change/pendula_pubescens/synonymous/data.png}
+            \caption{observed}
+            \label{fig:constant_pop_size_since_ice_age}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration_one_pop_size_change/pendula_pubescens/synonymous/model.png}
+            \caption{modelled}
+            \label{fig:one_pop_size_change_since_ice_age}
+        \end{subfigure}
+        \caption{Observed and modelled \acrshort{sfs} for asymmetric migration between the two species together with population growth modelled by a single population size change. This is the model with the highest likelihood and lowest average residual among all 2D scenarios.}
+        \label{fig:dadi_sfs_best_fixed_time_model}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_no_migration/pendula_pubescens/synonymous/residuals.png}
+            \caption{no migration + constant size}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.495\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_no_migration_one_pop_size_change/pendula_pubescens/synonymous/residuals.png}
+            \caption{no migration + 1-size change}
+        \end{subfigure}
+        \caption{Anscombe residuals for 2D scenarios without migration over variable time.}
+        \label{fig:dadi_2d_residuals_constant_size_variable_time}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_symmetric_migration/pendula_pubescens/synonymous/residuals.png}
+            \caption{symmetric migration}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.5\textwidth}
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/dadi/split_asymmetric_migration/pendula_pubescens/synonymous/residuals.png}
+            \caption{asymmetric migration}
+        \end{subfigure}
+        \caption{Anscombe residuals for 2D scenarios with (a)-symmetric migration and a constant population size over variable time.}
+        \label{fig:dadi_2d_residuals_variable_time_migration_constant_size}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
@@ -1960,11 +1948,51 @@
 
     \subsection{polyDFE}
     \label{sec:appendix-polydfe}
+    
+    \begin{figure}[ht]
+        \centering
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pendula_pubescens/dfe_probs_nested.C.png}
+            \caption{both species}
+            \label{fig:probs_nested_pendula_pubescens}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pendula/dfe_probs_nested.C.png}
+            \caption{\pendula{}}
+            \label{fig:probs_nested_pendula}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.32\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{tetraploid/graphs/png/polydfe/pubescens/dfe_probs_nested.C.png}
+            \caption{\pubescens{}}
+            \label{fig:probs_nested_pubescens}
+        \end{subfigure}
+        \caption{Visualisation of p-values of \acrshort{lrt}s for various \acrshort{dfe} models. The null hypothesis assumes that the more complex model (positioned on the vertical axis) does not provide a better fit to the data. The axis labels \textit{full anc} and \textit{del} denote the \textit{full \acrshort{dfe} + ancestral misidentification} and \textit{deleterious \acrshort{dfe}}, respectively.}
+        \label{fig:probs_nested}
+    \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{default/graphs/png/rulegraphs/polydfe.png}
         \caption{polyDFE subworkflow.}
+    \end{figure}
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.9\textwidth]{tetraploid/graphs/png/polydfe/dfe_subpopulations_bs_bca.C.full_anc.png}
+        \caption{The full \acrshort{dfe} for the four different subpopulations. The vertical bars indicate 95\% confidence intervals. There seem to be more slightly advantageous mutations for \pubescens{}.}
+        \label{fig:dfe_subpopulations}
+    \end{figure}
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.9\textwidth]{tetraploid/graphs/png/polydfe/pendula/dfe_type_bs_bca.C.png}
+        \caption{Different types of \acrshort{dfe} for \pendula{}. Correcting for ancestral misidentification does not change the distribution considerably.}
+        \label{fig:dfe_type_C_pendula}
     \end{figure}
 
     \begin{figure}[H]
