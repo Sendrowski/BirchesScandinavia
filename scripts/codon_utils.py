@@ -6,12 +6,14 @@ __author__ = "Janek Sendrowski"
 __contact__ = "j.sendrowski18@gmail.com"
 __date__ = "2022-05-31"
 
+import re
+
 import Bio.Data.CodonTable
 import numpy as np
 import pandas as pd
-import re
-import utils
 from Bio.Seq import Seq
+
+import utils
 
 bases = np.array(['G', 'A', 'T', 'C'])
 codon_table = Bio.Data.CodonTable.standard_dna_table.forward_table
@@ -48,6 +50,10 @@ def load_genes(gff):
     # prepare list of genes
     genes = annotation[annotation.feature == 'gene']
     return genes.reset_index(drop=True)
+
+
+def format_errors(records):
+    return str([str(r) for r in records])
 
 
 # get the gene enclosing given contig and position
