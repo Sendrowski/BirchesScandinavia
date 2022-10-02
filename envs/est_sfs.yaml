@@ -1,6 +1,6 @@
 name: est_sfs
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
 dependencies:
   - gsl=2.7

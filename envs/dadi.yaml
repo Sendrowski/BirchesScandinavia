@@ -1,7 +1,7 @@
 name: dadi
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
 dependencies:
   - python>=3.8
   - dadi=2.1.1

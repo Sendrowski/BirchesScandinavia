@@ -1,7 +1,7 @@
 name: biopython
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
 dependencies:
   - python>=3.9
   - pyvcf=0.6.8
