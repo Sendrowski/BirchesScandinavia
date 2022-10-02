@@ -1,11 +1,11 @@
 birch_samples: 'resources/birch_samples.csv'
-sample_sets: 'output/{sample_class}/sample_sets/{sample_set}.args'
+sample_sets: 'results/{sample_class}/sample_sets/{sample_set}.args'
 pendula_samples_luis: 'resources/pendula_samples_luis.txt'
 outgroup_samples: 'resources/outgroup_samples.csv'
 reference_genome: 'resources/reference/genome.fasta'
 annotation_file: 'resources/reference/genome.gff'
 targeted_genes: 'resources/reference/targeted_positions.txt'
-plink_data: 'output/{sample_class}/snps/{sample_set}/{flag}/snps'
+plink_data: 'results/{sample_class}/snps/{sample_set}/{flag}/snps'
 # separate the population at this latitude
 latitudinal_barriers:
   pendula: 64
