@@ -20,7 +20,7 @@ import utils
 try:
     input = snakemake.input[0]
     sample_set = snakemake.params.sample_set
-    sample_class = snakemake.params['sample_class']
+    sample_class = snakemake.params.sample_class
 
     pendula_latitudinal_barrier = snakemake.config['latitudinal_barriers']['pendula']
     pubescens_latitudinal_barrier = snakemake.config['latitudinal_barriers']['pubescens']
@@ -36,7 +36,6 @@ except NameError:
     pubescens_latitudinal_barrier = 65
 
     out = f'scratch/{sample_set}.args'
-
 
 # get the samples to be included depending on ADMIXTURE's
 # Q matrix denoting the provenance of an individual
