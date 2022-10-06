@@ -38,7 +38,7 @@ rule create_sample_set_birch:
 # create file containing the samples of the left initial PCA clusters
 rule create_sample_set_left_cluster:
     input:
-        "results/{sample_class}/snps/birch/biallelic/snps.bed"
+        "results/default/snps/birch/biallelic/snps.bed"
     output:
         "results/{sample_class}/sample_sets/left_cluster.args"
     params:
@@ -52,7 +52,7 @@ rule create_sample_set_left_cluster:
 # create file containing the samples of the right initial PCA clusters
 rule create_sample_set_right_cluster:
     input:
-        "results/{sample_class}/snps/birch/biallelic/snps.bed"
+        "results/default/snps/birch/biallelic/snps.bed"
     output:
         "results/{sample_class}/sample_sets/right_cluster.args"
     params:
@@ -81,7 +81,7 @@ rule create_sample_set_pendula_pubescens:
 # B. pendula species based on PCA
 rule create_sample_set_pendula:
     input:
-        "results/{sample_class}/sample_sets/right_cluster.args"
+        "results/default/sample_sets/right_cluster.args"
     output:
         "results/{sample_class}/sample_sets/pendula.args"
     params:
@@ -96,7 +96,7 @@ rule create_sample_set_pendula:
 # B. pendula species based on PCA
 rule create_sample_set_pendula_south:
     input:
-        "results/{sample_class}/sample_sets/pendula.args"
+        "results/default/sample_sets/pendula.args"
     output:
         "results/{sample_class}/sample_sets/pendula_south.args"
     params:
@@ -111,7 +111,7 @@ rule create_sample_set_pendula_south:
 # B. pendula species based on PCA
 rule create_sample_set_pendula_north:
     input:
-        "results/{sample_class}/sample_sets/pendula.args"
+        "results/default/sample_sets/pendula.args"
     output:
         "results/{sample_class}/sample_sets/pendula_north.args"
     params:
@@ -126,7 +126,7 @@ rule create_sample_set_pendula_north:
 # B. pubescens species based on PCA
 rule create_sample_set_pubescens_south:
     input:
-        "results/{sample_class}/sample_sets/pubescens.args"
+        "results/default/sample_sets/pubescens.args"
     output:
         "results/{sample_class}/sample_sets/pubescens_south.args"
     params:
@@ -141,7 +141,7 @@ rule create_sample_set_pubescens_south:
 # B. pubescens species based on PCA
 rule create_sample_set_pubescens_north:
     input:
-        "results/{sample_class}/sample_sets/pubescens.args"
+        "results/default/sample_sets/pubescens.args"
     output:
         "results/{sample_class}/sample_sets/pubescens_north.args"
     params:
@@ -168,7 +168,7 @@ rule create_sample_set_pendula_luis:
 # B. pubescens species based on PCA
 checkpoint create_sample_set_pubescens:
     input:
-        "results/{sample_class}/sample_sets/left_cluster.args"
+        "results/default/sample_sets/left_cluster.args"
     output:
         "results/{sample_class}/sample_sets/pubescens.args"
     params:
