@@ -58,7 +58,7 @@ except NameError:
 
 
 def parse_lnl(file):
-    # take the last row which if the file contains bootstrap ci estimates
+    # take the last row if the file contains bootstrap ci estimates
     # and take the first row otherwise
     n_row = -1 if '_ci' in file else 0
 
